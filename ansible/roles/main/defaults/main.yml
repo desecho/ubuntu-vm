@@ -1,0 +1,27 @@
+required_packages:
+  - curl
+  - unattended-upgrades  # Make sure we get security updates automatically
+  - htop  # For monitoring
+  - iftop  # For monitoring
+  - mc
+
+pip_packages:
+  - tox
+  - isort
+  - black
+
+docker_requirements:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg
+
+docker_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+
+kubectl_version: 1.20.4
+
+default_editor: nano
+shell_init_file: .zshrc

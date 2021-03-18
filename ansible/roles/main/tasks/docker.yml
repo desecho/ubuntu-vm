@@ -1,0 +1,23 @@
+- name: Ensure required packages are present
+  apt: "name={{ docker_requirements }} state=present"
+
+- name: Check if the key exists
+  stat:
+    path: /usr/share/keyrings/docker-archive-keyring.gpg
+  register: key_exists
+
+- name: Add apt key
+  shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  when: not key_exists
+
+- name: Add apt source
+  lineinfile:
+    path: /etc/apt/sources.list.d/docker.list
+    line: deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu focal stable
+    create: yes
+
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Ensure required packages are present
+  apt: "name={{ docker_packages }} state=present"

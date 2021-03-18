@@ -1,0 +1,19 @@
+- name: Ensure terminator is installed
+  apt: "name=terminator state=present"
+
+- name: Ensure we have terminator config directory
+  file: path="{{ lookup('env', 'HOME') }}/.config/terminator" state=directory
+
+- name: Add terminator config
+  template:
+    src: "terminator/terminator.config"
+    dest: "{{ lookup('env', 'HOME') }}/.config/terminator/config"
+    owner: "{{ lookup('env', 'USER') }}"
+    mode: "600"
+
+- name: Apply theme
+  template:
+    src: "terminator/gtk.css"
+    dest: "{{ lookup('env', 'HOME') }}/.config/gtk-3.0/gtk.css"
+    owner: "{{ lookup('env', 'USER') }}"
+    mode: "600"

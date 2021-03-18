@@ -1,0 +1,2 @@
+- name: Ensure required packages are present
+  apt: "name={{ required_packages }} state=present"

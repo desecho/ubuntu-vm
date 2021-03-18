@@ -1,0 +1,17 @@
+- name: Add gitconfig
+  template:
+    src: "gitconfig"
+    dest: "{{ lookup('env', 'HOME') }}/.gitconfig"
+    owner: "{{ lookup('env', 'USER') }}"
+    mode: "600"
+
+- name: Add commands for shell init
+  blockinfile:
+    dest: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
+    block: "{{ lookup('file', 'shell_init.sh') }}"
+
+- name: Fix error popup on startup
+  lineinfile:
+    path: /etc/default/apport
+    regexp: "enabled=1"
+    line: "enabled=0"

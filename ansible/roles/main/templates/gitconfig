@@ -1,0 +1,14 @@
+[user]
+    name = {{ full_name }}
+    email = {{ email }}
+[color]
+    diff = always
+    ui = always
+[push]
+    default = current
+[core]
+    editor = {{ default_editor }}
+[pull]
+    rebase = true
+[http]
+    sslVerify = false
