@@ -4,4 +4,5 @@
     warn: no
 
 - name: Install Node.js
-  apt: "name=nodejs state=present"
+  apt:
+    name: nodejs

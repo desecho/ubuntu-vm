@@ -1,5 +1,6 @@
-- include: packages.yml
-- include: pip_packages.yml
+- include: packages/apt.yml
+- include: packages/pip.yml
+- include: packages/npm.yml
 
 - include: terminator.yml
 - include: kubectl.yml

@@ -1,4 +1,4 @@
-required_packages:
+apt_packages:
   - curl
   - unattended-upgrades  # Make sure we get security updates automatically
   - htop  # For monitoring
@@ -12,6 +12,9 @@ pip_packages:
   - isort
   - black
   - docker-compose
+
+npm_packages:
+  - yarn
 
 docker_requirements:
   - apt-transport-https

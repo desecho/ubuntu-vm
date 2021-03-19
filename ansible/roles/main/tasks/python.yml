@@ -4,4 +4,5 @@
     state: present
 
 - name: Install Python
-  apt: "name=python{{ python_version }} state=present"
+  apt:
+    name: "python{{ python_version }}"

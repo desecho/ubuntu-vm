@@ -19,6 +19,7 @@ It has the following packages pre-installed:
 * mysql-client
 * net-tools
 * Node.js
+* yarn
 
 ## Install Ubuntu
 
