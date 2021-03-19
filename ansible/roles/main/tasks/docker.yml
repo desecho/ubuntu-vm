@@ -21,3 +21,14 @@
 
 - name: Ensure required packages are present
   apt: "name={{ docker_packages }} state=present"
+
+- name: Create docker group
+  group:
+    name: docker
+
+- name: Add user to docker group
+  user:
+    append: yes
+    name: "{{ lookup('env', 'USER') }}"
+    groups:
+      - docker
