@@ -1,0 +1,13 @@
+- name: Install Go
+  unarchive:
+    src: "https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz"
+    remote_src: yes
+    dest: /usr/local
+    owner: root
+    mode: "755"
+
+- name: Add Go to PATH
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
+    regexp: export PATH=$PATH:/usr/local/go/bin
+    line: export PATH=$PATH:/usr/local/go/bin

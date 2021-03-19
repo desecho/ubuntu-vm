@@ -4,4 +4,4 @@ set -eu
 
 cd $(dirname "$0")
 
-ansible-playbook main.yml --connection local --inventory ansible/inventory
+ansible-playbook main.yml --connection local --inventory inventory

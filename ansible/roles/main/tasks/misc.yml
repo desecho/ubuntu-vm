@@ -1,17 +1,19 @@
 - name: Add gitconfig
   template:
-    src: "gitconfig"
+    src: gitconfig
     dest: "{{ lookup('env', 'HOME') }}/.gitconfig"
     owner: "{{ lookup('env', 'USER') }}"
     mode: "600"
+  when: full_name and email
 
-- name: Add commands for shell init
+- name: Add aliases and commands
   blockinfile:
     dest: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
-    block: "{{ lookup('file', 'shell_init.sh') }}"
+    block: "{{ lookup('file', 'aliases_and_commands.sh') }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR ALIASES/COMMANDS"
 
 - name: Fix error popup on startup
   lineinfile:
     path: /etc/default/apport
-    regexp: "enabled=1"
-    line: "enabled=0"
+    regexp: enabled=1
+    line: enabled=0

@@ -22,6 +22,7 @@ docker_packages:
   - containerd.io
 
 kubectl_version: 1.20.4
+go_version: 1.16.2
 
 default_editor: nano
 shell_init_file: .zshrc

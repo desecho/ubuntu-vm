@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   vars_files:
-    - vars/config.yml
+    - vars.yml
 
   roles:
     - main

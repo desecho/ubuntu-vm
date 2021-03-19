@@ -1,7 +1,9 @@
-- include: packages.yml
-- include: pip_packages.yml
-- include: terminator.yml
-- include: kubectl.yml
-- include: docker.yml
+# - include: packages.yml
+# - include: pip_packages.yml
+
+# - include: terminator.yml
+# - include: kubectl.yml
+# - include: docker.yml
+# - include: go.yml
 
 - include: misc.yml

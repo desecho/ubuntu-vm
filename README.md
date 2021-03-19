@@ -5,20 +5,16 @@ It has the following packages pre-installed:
 * Docker
 * Ansible
 * pip
-* htop
 * terminator
 * mc
-* iftop
 * curl
-
-Also the following pip packages:
-
+* htop
+* iftop
+* kubectl
 * tox
 * isort
 * black
-
-Optionally you can install the following:
-* Pycharm
+* Go
 
 ## Install Ubuntu
 
@@ -36,8 +32,7 @@ Open VM settings
 
 Install Ubuntu Desktop. Choose minimal installation.
 
-Run terminal
-
+Run
 ```bash
 sudo echo "[username] ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo apt update
@@ -114,11 +109,3 @@ Open Settings. Then set up:
 - Privacy -> Screen Lock -> Blank Screen Delay -> Never
 
 You are done!
-
-If you installed VSCode you might find those extensions helpful:
-* Python
-* Docker
-* Go
-* EditorConfig for VS Code
-* Pytest IntelliSense
-* Git Blame
