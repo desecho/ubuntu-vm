@@ -15,6 +15,7 @@ It has the following packages pre-installed:
 * isort
 * black
 * Go
+* docker-compose
 
 ## Install Ubuntu
 
@@ -64,7 +65,7 @@ git clone git@github.com:desecho/vm.git
 
 If you want to install VS Code run
 ```bash
-./vs_code/install_vs_code.sh
+vs_code/install_vs_code.sh
 ```
 
 If you have a 4k display run
@@ -86,20 +87,19 @@ Run Tweaks
 
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 ```bash
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+./install_oh_my_zsh.sh
 ```
 
 Install Ansible:
 ```bash
-./ansible/install_ansible.sh
+ansible/install_ansible.sh
 ```
 
 Then you need to configure the variables in `ansible/vars/config.yml`.
 You might also want to change variables in `ansible/roles/main/defaults/main.yml`.
 Then run
 ```bash
-./ansible/provision.sh
+ansible/provision.sh
 ```
 
 Open Settings. Then set up:
