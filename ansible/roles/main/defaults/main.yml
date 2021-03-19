@@ -26,6 +26,7 @@ docker_packages:
 
 kubectl_version: 1.20.4
 go_version: 1.16.2
+python_version: 3.9
 
 default_editor: nano
 shell_init_file: .zshrc

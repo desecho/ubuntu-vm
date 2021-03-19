@@ -8,3 +8,4 @@
 - include: nodejs.yml
 
 - include: misc.yml
+- include: python.yml

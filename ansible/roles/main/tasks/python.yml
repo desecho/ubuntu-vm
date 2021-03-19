@@ -1,0 +1,7 @@
+- name: Add repository to install Python
+  apt_repository:
+    repo: ppa:deadsnakes/ppa
+    state: present
+
+- name: Install Python
+  apt: "name=python{{ python_version }} state=present"
