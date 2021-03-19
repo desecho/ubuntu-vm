@@ -6,6 +6,7 @@ required_packages:
   - mc
   - mysql-client
   - net-tools
+
 pip_packages:
   - tox
   - isort

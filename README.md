@@ -18,6 +18,7 @@ It has the following packages pre-installed:
 * docker-compose
 * mysql-client
 * net-tools
+* Node.js
 
 ## Install Ubuntu
 

@@ -1,0 +1,7 @@
+- name: Prepare Node.js installation
+  shell: curl -fsSL https://deb.nodesource.com/setup_15.x | bash -
+  args:
+    warn: no
+
+- name: Install Node.js
+  apt: "name=nodejs state=present"
