@@ -16,6 +16,8 @@ It has the following packages pre-installed:
 * black
 * Go
 * docker-compose
+* mysql-client
+* net-tools
 
 ## Install Ubuntu
 

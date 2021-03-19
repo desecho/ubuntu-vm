@@ -4,7 +4,8 @@ required_packages:
   - htop  # For monitoring
   - iftop  # For monitoring
   - mc
-
+  - mysql-client
+  - net-tools
 pip_packages:
   - tox
   - isort
