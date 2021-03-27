@@ -12,14 +12,13 @@ It has the following packages pre-installed:
 * iftop
 * kubectl
 * tox
-* isort
-* black
 * Go
 * docker-compose
 * mysql-client
 * net-tools
 * Node.js
 * yarn
+* locate
 
 ## Install Ubuntu
 

@@ -23,3 +23,4 @@ code --install-extension editorconfig.editorconfig
 code --install-extension cameron.vscode-pytest
 code --install-extension waderyan.gitblame
 code --install-extension mohsen1.prettify-json
+code --install-extension lextudio.restructuredtext

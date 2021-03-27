@@ -6,11 +6,10 @@ apt_packages:
   - mc
   - mysql-client
   - net-tools
+  - locate
 
 pip_packages:
   - tox
-  - isort
-  - black
   - docker-compose
 
 npm_packages:
