@@ -21,6 +21,7 @@ It has the following packages pre-installed:
 * locate
 * doctl
 * TFLint
+* Helm
 
 ## Install Ubuntu
 

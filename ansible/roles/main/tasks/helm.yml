@@ -1,0 +1,20 @@
+- name: Check if Helm has been installed already
+  stat:
+    path: /usr/local/bin/helm
+  register: helm_file
+
+- name: Install Helm
+  block:
+    - name: Download Helm
+      unarchive:
+        src: "https://get.helm.sh/helm-v{{ helm_version }}-linux-amd64.tar.gz"
+        remote_src: yes
+        dest: /tmp
+
+    - name: Install Helm
+      copy:
+        src: /tmp/linux-amd64/helm
+        dest: /usr/local/bin/helm
+        owner: root
+        mode: "755"
+  when: not helm_file.stat.exists

@@ -9,6 +9,7 @@
 - include: go.yml
 - include: nodejs.yml
 - include: tflint.yml
+- include: helm.yml
 
 - include: misc.yml
 - include: python.yml
