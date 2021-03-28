@@ -22,6 +22,7 @@ It has the following packages pre-installed:
 * doctl
 * TFLint
 * Helm
+* jq
 
 ## Install Ubuntu
 
