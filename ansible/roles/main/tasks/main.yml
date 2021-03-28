@@ -1,12 +1,14 @@
 - include: packages/apt.yml
 - include: packages/pip.yml
 - include: packages/npm.yml
+- include: packages/snap.yml
 
 - include: terminator.yml
 - include: kubectl.yml
 - include: docker.yml
 - include: go.yml
 - include: nodejs.yml
+- include: tflint.yml
 
 - include: misc.yml
 - include: python.yml

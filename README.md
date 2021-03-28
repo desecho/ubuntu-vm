@@ -19,6 +19,8 @@ It has the following packages pre-installed:
 * Node.js
 * yarn
 * locate
+* doctl
+* TFLint
 
 ## Install Ubuntu
 
