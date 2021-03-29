@@ -6,3 +6,7 @@
 - name: Install Python
   apt:
     name: "python{{ python_version }}"
+
+- name: Install Python venv
+  apt:
+    name: "python{{ python_version }}-venv"

@@ -8,6 +8,7 @@ apt_packages:
   - net-tools
   - locate
   - jq
+  - python3-venv
 
 pip_packages:
   - tox
