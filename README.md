@@ -23,6 +23,7 @@ It has the following packages pre-installed:
 * TFLint
 * Helm
 * jq
+* yq
 * pwgen
 
 ## Install Ubuntu
