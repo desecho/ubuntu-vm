@@ -9,6 +9,7 @@ apt_packages:
   - locate
   - jq
   - python3-venv
+  - pwgen
 
 pip_packages:
   - tox
