@@ -10,6 +10,7 @@
 - include: nodejs.yml
 - include: tflint.yml
 - include: helm.yml
+- include: yq.yml
 
 - include: misc.yml
 - include: python.yml
