@@ -14,6 +14,7 @@ apt_packages:
 pip_packages:
   - tox
   - docker-compose
+  - s3cmd
 
 npm_packages:
   - yarn

@@ -25,6 +25,7 @@ It has the following packages pre-installed:
 * jq
 * yq
 * pwgen
+* s3cmd
 
 ## Install Ubuntu
 
