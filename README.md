@@ -36,7 +36,7 @@ Open VM settings
 
 * User Interface -> Uncheck Show in Full-screen/Seamless.
 * Display -> Enable 3D Acceleration
-* Display -> Graphics controller -> VBoxVGA
+* Display -> Graphics controller -> VBoxSVGA
 * System -> Motherboard -> Base Memory -> Set to the desired value
 * System -> Processor -> Select maximum number of cores you have
 * General -> Advanced -> Shared Clipboard -> Bidirectional
@@ -45,15 +45,18 @@ Install Ubuntu Desktop. Choose minimal installation.
 
 Run
 ```bash
-sudo echo "[username] ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-sudo apt update
-sudo apt upgrade -y
-sudo apt install git make gcc perl -y
+sudo su
+echo "[username] ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+apt update
+apt upgrade -y
+apt install git make gcc perl -y
 ```
 
 * Select Devices -> Insert Guest Additions CD image.
 
-Eject the CD
+Eject the CD.
+
+Restart VM.
 
 Remove from favorites:
 
@@ -70,7 +73,7 @@ Add key on the [github key settings page](https://github.com/settings/keys)
 
 Then run
 ```bash
-git clone git@github.com:desecho/vm.git
+git clone git@github.com:desecho/ubuntu-vm.git
 ```
 
 If you want to install VS Code run
@@ -78,7 +81,7 @@ If you want to install VS Code run
 vs_code/install_vs_code.sh
 ```
 
-If you have a 4k display run
+If you have a 4k display and the cursor appears too large run
 ```bash
 sudo apt install dconf-editor
 ```
@@ -105,7 +108,7 @@ Install Ansible:
 ansible/install_ansible.sh
 ```
 
-Then you need to configure the variables in `ansible/vars/config.yml`.
+Then you need to configure the variables in `ansible/vars.yml`.
 You might also want to change variables in `ansible/roles/main/defaults/main.yml`.
 Then run
 ```bash

@@ -13,6 +13,7 @@ sudo apt update
 sudo apt install code -y
 
 # Configure settings
+mkdir -p ~/.config/Code/User
 cp settings.json ~/.config/Code/User/settings.json
 
 # Install extensions

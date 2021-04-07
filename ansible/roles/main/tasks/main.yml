@@ -1,3 +1,4 @@
+- include: nodejs.yml
 - include: packages/apt.yml
 - include: packages/pip.yml
 - include: packages/npm.yml
@@ -7,7 +8,6 @@
 - include: kubectl.yml
 - include: docker.yml
 - include: go.yml
-- include: nodejs.yml
 - include: tflint.yml
 - include: helm.yml
 - include: yq.yml
