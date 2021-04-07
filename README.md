@@ -113,6 +113,7 @@ You might also want to change variables in `ansible/roles/main/defaults/main.yml
 Then run
 ```bash
 ansible/provision.sh
+sudo shutdown -r now
 ```
 
 Open Settings. Then set up:
