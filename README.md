@@ -26,6 +26,8 @@ It has the following packages pre-installed:
 * yq
 * pwgen
 * s3cmd
+* chromium
+* ngrok
 
 ## Install Ubuntu
 
