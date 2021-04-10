@@ -1,0 +1,7 @@
+- name: Install ngrok
+  unarchive:
+    src: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+    remote_src: yes
+    dest: /usr/local/bin
+    owner: root
+    mode: "755"
