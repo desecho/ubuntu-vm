@@ -10,6 +10,7 @@ apt_packages:
   - jq
   - python3-venv
   - pwgen
+  - chromium-browser
 
 pip_packages:
   - tox
