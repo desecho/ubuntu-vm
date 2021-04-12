@@ -1,0 +1,11 @@
+- name: Install s3cmd
+  pip:
+    name: s3cmd
+    executable: pip3
+
+- name: Add config
+  template:
+    src: .s3cfg
+    dest: "{{ lookup('env', 'HOME') }}/.s3cfg"
+    owner: "{{ lookup('env', 'USER') }}"
+    mode: "600"

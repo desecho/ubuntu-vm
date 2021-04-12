@@ -5,3 +5,13 @@
     dest: /usr/local/bin
     owner: root
     mode: "755"
+
+- name: Ensure we have ngrok config directory
+  file: path="{{ lookup('env', 'HOME') }}/.ngrok2" state=directory
+
+- name: Add config
+  template:
+    src: config.yaml
+    dest: "{{ lookup('env', 'HOME') }}/.ngrok2/ngrok.yml"
+    owner: "{{ lookup('env', 'USER') }}"
+    mode: "600"

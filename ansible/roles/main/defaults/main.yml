@@ -15,13 +15,9 @@ apt_packages:
 pip_packages:
   - tox
   - docker-compose
-  - s3cmd
 
 npm_packages:
   - yarn
-
-snap_packages:
-  - doctl
 
 docker_requirements:
   - apt-transport-https

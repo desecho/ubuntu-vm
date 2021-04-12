@@ -1,2 +1,6 @@
 full_name:
 email:
+digitalocean_token:
+spaces_secret_key:
+spaces_access_key:
+ngrok_token:
