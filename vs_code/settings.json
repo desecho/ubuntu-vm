@@ -1,7 +1,7 @@
 {
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespace": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false
 }
