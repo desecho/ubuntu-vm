@@ -8,5 +8,5 @@
 - name: Configure editor
   lineinfile:
     path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
-    regexp: export KUBE_EDITOR="nano"
-    line: export KUBE_EDITOR="nano"
+    regexp: export KUBE_EDITOR="{{ default_editor }}"
+    line: export KUBE_EDITOR="{{ default_editor }}"

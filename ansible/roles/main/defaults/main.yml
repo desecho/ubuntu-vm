@@ -1,7 +1,6 @@
 apt_packages:
   - curl
   - unattended-upgrades  # Make sure we get security updates automatically
-  - htop  # For monitoring
   - iftop  # For monitoring
   - mc
   - mysql-client
@@ -12,10 +11,12 @@ apt_packages:
   - pwgen
   - chromium-browser
   - ncdu
+  - micro
 
 pip_packages:
   - tox
   - docker-compose
+  - bpytop
 
 npm_packages:
   - yarn
@@ -37,5 +38,5 @@ python_version: 3.9
 helm_version: 3.5.3
 yq_version: 4.6.3
 
-default_editor: nano
+default_editor: micro
 shell_init_file: .zshrc

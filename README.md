@@ -8,8 +8,9 @@ It has the following packages pre-installed:
 * terminator
 * mc
 * curl
-* htop
+* bpytop
 * iftop
+* micro
 * kubectl
 * tox
 * Go
