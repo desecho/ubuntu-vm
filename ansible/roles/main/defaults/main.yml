@@ -11,6 +11,7 @@ apt_packages:
   - python3-venv
   - pwgen
   - chromium-browser
+  - ncdu
 
 pip_packages:
   - tox

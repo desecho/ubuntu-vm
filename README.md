@@ -28,6 +28,7 @@ It has the following packages pre-installed:
 * s3cmd
 * chromium
 * ngrok
+* ncdu
 
 ## Install Ubuntu
 
@@ -62,7 +63,6 @@ Restart VM.
 
 Remove from favorites:
 
-* Ubuntu Software
 * Help
 
 Create a key with
