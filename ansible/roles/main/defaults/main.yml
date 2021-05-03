@@ -11,7 +11,6 @@ apt_packages:
   - pwgen
   - chromium-browser
   - ncdu
-  - micro
 
 pip_packages:
   - tox

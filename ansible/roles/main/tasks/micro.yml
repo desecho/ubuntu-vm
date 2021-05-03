@@ -1,0 +1,7 @@
+- name: Download micro
+  shell: curl https://getmic.ro | bash
+  args:
+    warn: no
+
+- name: Install micro
+  command: mv micro /usr/bin

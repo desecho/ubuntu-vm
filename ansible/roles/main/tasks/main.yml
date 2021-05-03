@@ -1,20 +1,21 @@
-- include: nodejs.yml
-- include: packages/apt.yml
-- include: packages/pip.yml
-- include: packages/npm.yml
-- include: packages/snap.yml
+# - include: nodejs.yml
+# - include: packages/apt.yml
+# - include: packages/pip.yml
+# - include: packages/npm.yml
+# - include: packages/snap.yml
 
-- include: terminator.yml
-- include: kubectl.yml
-- include: docker.yml
-- include: go.yml
-- include: tflint.yml
-- include: helm.yml
-- include: yq.yml
-- include: ngrok.yml
-- include: dbeaver.yml
-- include: doctl.yml
-- include: s3cmd.yml
+# - include: terminator.yml
+# - include: kubectl.yml
+# - include: docker.yml
+# - include: go.yml
+# - include: tflint.yml
+# - include: helm.yml
+# - include: yq.yml
+# - include: ngrok.yml
+# - include: dbeaver.yml
+# - include: doctl.yml
+# - include: s3cmd.yml
+- include: micro.yml
 
-- include: misc.yml
-- include: python.yml
+# - include: misc.yml
+# - include: python.yml
