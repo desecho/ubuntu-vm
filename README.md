@@ -30,6 +30,7 @@ It has the following packages pre-installed:
 * chromium
 * ngrok
 * ncdu
+* thefuck
 
 ## Install Ubuntu
 

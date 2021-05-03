@@ -17,6 +17,7 @@ pip_packages:
   - tox
   - docker-compose
   - bpytop
+  - thefuck
 
 npm_packages:
   - yarn
