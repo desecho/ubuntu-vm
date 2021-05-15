@@ -5,3 +5,8 @@
 
 - name: Install micro
   command: mv micro /usr/bin
+
+# xclip is necessary for the clipboard to work properly
+- name: Install xclip
+  apt:
+    name: xclip
