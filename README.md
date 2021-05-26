@@ -44,7 +44,9 @@ Open VM settings
 * Display -> Graphics controller -> VBoxSVGA
 * System -> Motherboard -> Base Memory -> Set to the desired value
 * System -> Processor -> Select maximum number of cores you have
-* General -> Advanced -> Shared Clipboard -> Bidirectional
+* General -> Advanced
+  * Shared Clipboard -> Bidirectional
+  * Drag'n'Drop -> Bidirectional
 
 Install Ubuntu Desktop. Choose minimal installation.
 
