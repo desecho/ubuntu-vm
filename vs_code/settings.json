@@ -1,7 +1,10 @@
 {
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "go.toolsManagement.autoUpdate": true,
+  "window.restoreFullscreen": true,
+  "window.newWindowDimensions": "maximized"
 }
