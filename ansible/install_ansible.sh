@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+set -eou pipefail
 
 ANSIBLE_VERSION=3.1.0
 

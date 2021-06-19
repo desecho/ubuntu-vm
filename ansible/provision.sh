@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -eu
+set -eou pipefail
 
-cd $(dirname "$0")
+cd "$(dirname "$0")"
 
 ansible-playbook main.yml --connection local --inventory inventory

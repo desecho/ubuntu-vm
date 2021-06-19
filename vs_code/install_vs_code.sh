@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -eu
+set -eou pipefail
 
-cd $(dirname "$0")
+cd "$(dirname "$0")"
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /tmp/packages.microsoft.gpg
 sudo install -o root -g root -m 644 /tmp/packages.microsoft.gpg /etc/apt/trusted.gpg.d/

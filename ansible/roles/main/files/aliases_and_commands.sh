@@ -3,7 +3,7 @@ function dockerti(){
 }
 
 function getsecret(){
-    echo $(kubectl get secret $1 -o json | jq -r ".data.$2" | base64 -d)
+    kubectl get secret "$1" -o json | jq -r ".data.$2" | base64 -d
 }
 
 function kubectlti(){
@@ -12,7 +12,7 @@ function kubectlti(){
 
 function clean_docker() {
     docker system prune -a
-    docker volume rm $(docker volume ls --filter dangling=true -q)
+    docker volume rm "$(docker volume ls --filter dangling=true -q)"
 }
 
 alias gitamend='git add . && git commit --amend --no-edit'

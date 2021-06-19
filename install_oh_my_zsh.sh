@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+set -eou pipefail
 
 PLUGINS="git docker docker-compose thefuck"
 
