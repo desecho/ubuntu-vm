@@ -27,3 +27,4 @@ code --install-extension mohsen1.prettify-json
 code --install-extension lextudio.restructuredtext
 code --install-extension hashicorp.terraform
 code --install-extension timonwong.shellcheck
+code --install-extension github.copilot
