@@ -10,9 +10,17 @@ function kubectlti(){
     kubectl exec -ti $1 -- sh
 }
 
-function clean_docker() {
+function cleandocker() {
     docker system prune -a
     docker volume rm "$(docker volume ls --filter dangling=true -q)"
+}
+
+function gitrebase() {
+    branch=$(git branch --show-current)
+    git checkout master
+    git pull
+    git checkout "$branch"
+    git rebase master
 }
 
 alias gitamend='git add . && git commit --amend --no-edit'
