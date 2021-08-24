@@ -38,5 +38,5 @@ python_version: 3.9
 helm_version: 3.5.3
 yq_version: 4.6.3
 
-default_editor: micro
+default_editor: nano
 shell_init_file: .zshrc

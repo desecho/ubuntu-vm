@@ -15,7 +15,6 @@
 - include: dbeaver.yml
 - include: doctl.yml
 - include: s3cmd.yml
-- include: micro.yml
 
 - include: misc.yml
 - include: python.yml

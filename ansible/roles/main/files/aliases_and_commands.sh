@@ -23,6 +23,11 @@ function gitrebase() {
     git rebase master
 }
 
+function gitupdate() {
+    git checkout master
+    git pull
+}
+
 alias gitamend='git add . && git commit --amend --no-edit'
 alias fastcommit='git add . && git commit -m"Changes"'
 alias fastpush='fastcommit && git push'

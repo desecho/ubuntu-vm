@@ -10,7 +10,6 @@ It has the following packages pre-installed:
 * curl
 * bpytop
 * iftop
-* micro
 * kubectl
 * tox
 * Go
