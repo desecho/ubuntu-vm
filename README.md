@@ -78,7 +78,8 @@ sudo reboot
 
 Run Tweaks
 * Disable animations
-* Extensions → Enable "Dash to panel"
+* Extensions → enable "Dash to panel"
+* "Dash to panel" settings → Behavior → enable Isolate Workspaces
 
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 ```bash
