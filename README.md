@@ -73,7 +73,7 @@ To configure scaling, open Screen Display, and select scale.
 If you want to enable the "Dash to panel" GNOME extension run
 ```bash
 sudo apt install gnome-tweak-tool gnome-shell-extension-dash-to-panel -y
-sudo shutdown -r now
+sudo reboot
 ```
 
 Run Tweaks
@@ -97,7 +97,7 @@ You might also want to change variables in `ansible/roles/main/defaults/main.yml
 Then run
 ```bash
 ansible/provision.sh
-sudo shutdown -r now
+sudo reboot
 ```
 
 To prevent screen from going to sleep mode or locking, open Settings.
