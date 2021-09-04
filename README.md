@@ -139,6 +139,7 @@ To prevent screen from going to sleep mode or locking, open Settings.
 ### Monitoring
 * [bpytop](https://github.com/aristocratos/bpytop)
 * [iftop](https://linux.die.net/man/8/iftop)
+* [iotop](https://linux.die.net/man/1/iotop)
 
 ### Kubernetes
 * [kubectl](https://kubernetes.io/docs/reference/kubectl/)

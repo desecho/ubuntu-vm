@@ -1,7 +1,7 @@
 apt_packages:
   - curl
-  - unattended-upgrades  # Make sure we get security updates automatically
-  - iftop  # For monitoring
+  - unattended-upgrades
+  - iftop
   - mc
   - mysql-client
   - net-tools
@@ -11,6 +11,7 @@ apt_packages:
   - pwgen
   - chromium-browser
   - ncdu
+  - iotop
 
 pip_packages:
   - tox
