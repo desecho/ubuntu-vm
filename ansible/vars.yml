@@ -1,5 +1,7 @@
 full_name:
 email:
+
+# Tokens/secrets.
 digitalocean_token:
 spaces_secret_key:
 spaces_access_key:

@@ -1,16 +1,18 @@
-function dockerti(){
-    docker exec -ti $1 sh
+# shellcheck disable=SC2148
+
+function dockersh(){
+    docker exec -ti "$1" sh
 }
 
 function getsecret(){
     kubectl get secret "$1" -o json | jq -r ".data.$2" | base64 -d
 }
 
-function kubectlti(){
-    kubectl exec -ti $1 -- sh
+function kubectlsh(){
+    kubectl exec -ti "$1" -- sh
 }
 
-function cleandocker() {
+function dockerclean() {
     docker system prune -a
     docker volume rm "$(docker volume ls --filter dangling=true -q)"
 }

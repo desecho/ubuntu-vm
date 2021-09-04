@@ -1,4 +1,4 @@
-- name: Add gitconfig
+- name: Add git config
   template:
     src: .gitconfig
     dest: "{{ lookup('env', 'HOME') }}/.gitconfig"

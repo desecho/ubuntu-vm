@@ -1,8 +1,9 @@
 - include: nodejs.yml
+- include: python.yml
+
 - include: packages/apt.yml
 - include: packages/pip.yml
 - include: packages/npm.yml
-- include: packages/snap.yml
 
 - include: terminator.yml
 - include: kubectl.yml
@@ -17,4 +18,3 @@
 - include: s3cmd.yml
 
 - include: misc.yml
-- include: python.yml

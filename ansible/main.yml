@@ -3,6 +3,5 @@
   become: yes
   vars_files:
     - vars.yml
-
   roles:
     - main
