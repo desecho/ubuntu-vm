@@ -136,6 +136,8 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [ncdu](https://dev.yorhel.nl/ncdu)
 * [thefuck](https://github.com/nvbn/thefuck)
 * [Unattended Upgrades](https://wiki.debian.org/UnattendedUpgrades)
+* [exa](https://the.exa.website/)
+* [bat](https://github.com/sharkdp/bat)
 
 ### Monitoring
 * [bpytop](https://github.com/aristocratos/bpytop)

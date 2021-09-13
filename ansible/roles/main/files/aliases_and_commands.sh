@@ -33,3 +33,6 @@ function gitupdate() {
 alias gitamend='git add . && git commit --amend --no-edit'
 alias fastcommit='git add . && git commit -m"Changes"'
 alias fastpush='fastcommit && git push'
+alias ls=exa
+alias cat=batcat
+alias k=kubectl

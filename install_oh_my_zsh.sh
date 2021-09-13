@@ -3,7 +3,6 @@
 set -eou pipefail
 
 PLUGINS="git docker docker-compose thefuck"
-INIT_FILE=.zshrc
 
 sudo apt install zsh curl -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -13,5 +12,5 @@ cat >> ansible/vars.yml <<- EOM
 
 # DO NOT EDIT BELOW THIS LINE.
 # Requirement for zsh.
-shell_init_file: $INIT_FILE
+shell: zsh
 EOM

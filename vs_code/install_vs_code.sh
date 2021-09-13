@@ -29,3 +29,4 @@ code --install-extension hashicorp.terraform
 code --install-extension timonwong.shellcheck
 code --install-extension github.copilot
 code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+code --install-extension coenraads.bracket-pair-colorizer-2

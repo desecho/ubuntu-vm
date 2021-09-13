@@ -16,5 +16,6 @@
 - include: dbeaver.yml
 - include: doctl.yml
 - include: s3cmd.yml
+- include: exa.yml
 
 - include: misc.yml
