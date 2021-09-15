@@ -14,7 +14,7 @@ sudo apt install code -y
 
 # Configure settings
 mkdir -p ~/.config/Code/User
-cp settings.json ~/.config/Code/User/settings.json
+cp configs/* ~/.config/Code/User/
 
 # Install extensions
 code --install-extension ms-python.python
@@ -28,5 +28,5 @@ code --install-extension lextudio.restructuredtext
 code --install-extension hashicorp.terraform
 code --install-extension timonwong.shellcheck
 code --install-extension github.copilot
-code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code --install-extension coenraads.bracket-pair-colorizer-2
+code --install-extension geddski.macros

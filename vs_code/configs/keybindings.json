@@ -1,0 +1,6 @@
+[
+    {
+        "key": "ctrl+escape",
+        "command": "macros.reset"
+    }
+]

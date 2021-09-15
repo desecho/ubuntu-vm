@@ -1,0 +1,29 @@
+{
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "go.toolsManagement.autoUpdate": true,
+  "window.restoreFullscreen": true,
+  "window.newWindowDimensions": "maximized",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+      "*": true,
+      "yaml": true,
+      "plaintext": false,
+      "markdown": false
+  },
+  "search.exclude": {
+      "vendor/": true
+  },
+  "macros": {
+      "reset": [
+          "workbench.view.search",
+          "search.action.clearSearchResults",
+          "workbench.action.closeAllEditors",
+          "workbench.view.explorer",
+          "list.collapseAll"
+      ]
+  }
+}
