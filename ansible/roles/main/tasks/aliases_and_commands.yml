@@ -1,0 +1,5 @@
+- name: Add aliases and commands
+  blockinfile:
+    dest: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
+    block: "{{ lookup('file', 'aliases_and_commands.sh') }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR ALIASES/COMMANDS"

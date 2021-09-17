@@ -6,12 +6,6 @@
     mode: "600"
   when: full_name and email
 
-- name: Add aliases and commands
-  blockinfile:
-    dest: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
-    block: "{{ lookup('file', 'aliases_and_commands.sh') }}"
-    marker: "# {mark} ANSIBLE MANAGED BLOCK FOR ALIASES/COMMANDS"
-
 - name: Fix error popup on startup
   lineinfile:
     path: /etc/default/apport
