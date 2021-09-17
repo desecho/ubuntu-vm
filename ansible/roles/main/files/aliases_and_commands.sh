@@ -1,6 +1,6 @@
 # shellcheck disable=SC2148
 
-# Custom names are for `getsecret`, `fastpush`, `fastcommit`.
+# Custom names are for `getsecret`, `fastpush`, `fastcommit`, `fastamend`.
 # These are the names which don't start with the command they are calling.
 
 # Kubectl
@@ -11,8 +11,6 @@ function getsecret(){
 function kti(){
     kubectl exec -ti "$1" -- sh
 }
-
-alias k=kubectl
 
 #------------------------------------------------------------------------------
 
@@ -33,7 +31,7 @@ function _get_default_branch() {
     git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 }
 
-function grebase() {
+function grm() {
     current_branch=$(git branch --show-current)
     default_branch=$(_get_default_branch)
     git switch "$default_branch"
@@ -47,18 +45,23 @@ function gmaster() {
     git pull
 }
 
-alias g="git"
 alias gl='git log --oneline --decorate'
 alias gs="git status"
-alias gb="git branch"
-alias gsw="git switch"
-alias gd="git diff"
-alias gamend="git add . && git commit --amend --no-edit"
-alias gfp="git push --force-with-lease"
+alias gcm="git commit -m"
+alias gfpush="git push --force-with-lease"
+alias gpush="git push"
+alias gstash="git stash"
 alias gnew="git switch -c"
 alias gpull="git pull"
+alias grestore="git restore"
+alias greset="git reset"
+alias gr="git rebase"
+alias gra="git rebase --abort"
+alias grc="git rebase --continue"
+alias gri="git rebase -i"
 alias fastcommit="git add . && git commit -m'Changes'"
 alias fastpush="fastcommit && git push"
+alias fastamend="git add . && git commit --amend --no-edit"
 
 #------------------------------------------------------------------------------
 # Replacements

@@ -30,3 +30,4 @@ code --install-extension timonwong.shellcheck
 code --install-extension github.copilot
 code --install-extension coenraads.bracket-pair-colorizer-2
 code --install-extension geddski.macros
+code --install-extension yzhang.markdown-all-in-one
