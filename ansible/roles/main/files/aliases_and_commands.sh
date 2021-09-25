@@ -46,7 +46,6 @@ function gmaster() {
 }
 
 alias gl='git log --oneline --decorate'
-alias gs="git status"
 alias gcm="git commit -m"
 alias gfpush="git push --force-with-lease"
 alias gpush="git push"
