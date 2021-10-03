@@ -45,7 +45,8 @@ function gmaster() {
     git pull
 }
 
-alias gl='git log --oneline --decorate'
+alias gamend="git add . && git commit --amend --no-edit"
+alias gl="git log --oneline --decorate"
 alias gcm="git commit -m"
 alias gpush!="git push --force-with-lease"
 alias gpush="git push"
