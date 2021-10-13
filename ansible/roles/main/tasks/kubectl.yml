@@ -5,7 +5,7 @@
     owner: root
     mode: "755"
 
-- name: Configure editor
+- name: Set editor
   lineinfile:
     path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
     regexp: export KUBE_EDITOR="{{ default_editor }}"

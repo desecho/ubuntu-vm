@@ -11,3 +11,9 @@
     path: /etc/default/apport
     regexp: enabled=1
     line: enabled=0
+
+- name: Set default editor
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
+    regexp: "export EDITOR={{ default_editor }}"
+    line: "export EDITOR={{ default_editor }}"
