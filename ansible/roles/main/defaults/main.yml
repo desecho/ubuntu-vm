@@ -13,6 +13,7 @@ apt_packages:
   - ncdu
   - iotop
   - bat
+  - shellcheck
 
 pip_packages:
   - tox
@@ -42,6 +43,7 @@ helm_version: 3.5.3
 yq_version: 4.6.3
 exa_version: 0.10.1
 yh_version: 0.4.0
+shfmt_version: 3.4.0
 
 default_editor: nano
 

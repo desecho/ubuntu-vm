@@ -140,6 +140,8 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [bat](https://github.com/sharkdp/bat)
 * [fx](https://github.com/antonmedv/fx)
 * [yh](https://github.com/andreazorzetto/yh)
+* [shellcheck](https://www.shellcheck.net/)
+* [shfmt](https://github.com/mvdan/sh)
 
 ### Monitoring
 * [bpytop](https://github.com/aristocratos/bpytop)

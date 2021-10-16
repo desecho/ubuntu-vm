@@ -18,6 +18,7 @@
 - include: s3cmd.yml
 - include: exa.yml
 - include: yh.yml
+- include: shfmt.yml
 
 - include: aliases_and_commands.yml
 - include: misc.yml
