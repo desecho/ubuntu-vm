@@ -17,6 +17,7 @@
 - include: doctl.yml
 - include: s3cmd.yml
 - include: exa.yml
+- include: yh.yml
 
 - include: aliases_and_commands.yml
 - include: misc.yml

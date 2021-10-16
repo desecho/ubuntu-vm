@@ -138,6 +138,8 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [Unattended Upgrades](https://wiki.debian.org/UnattendedUpgrades)
 * [exa](https://the.exa.website/)
 * [bat](https://github.com/sharkdp/bat)
+* [fx](https://github.com/antonmedv/fx)
+* [yh](https://github.com/andreazorzetto/yh)
 
 ### Monitoring
 * [bpytop](https://github.com/aristocratos/bpytop)
