@@ -17,8 +17,9 @@ cat >> "$SHELL_INIT_FILE" <<- EOM
 # Block unwanted alias from the git plugin
 alias gp="echo command blocked"
 
-# Enable TAB for zsh-autosuggestions
-bindkey '\t' end-of-line
+# Enable [Shift + Tab] for zsh-autosuggestions
+bindkey '^[[Z' end-of-line
+
 EOM
 
 # Required for proper ansible provisioning
