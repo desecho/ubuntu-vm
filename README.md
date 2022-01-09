@@ -107,7 +107,6 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * Power → Blank screen → Never
 * Privacy → Screen Lock → Automatic Screen Lock → Off
 * Privacy → Screen Lock → Lock Screen on Suspend → Off
-* Privacy → Screen Lock → Blank Screen Delay → Never
 
 ## Included packages
 
