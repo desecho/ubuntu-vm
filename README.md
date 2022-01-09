@@ -83,7 +83,8 @@ Run Tweaks
 
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 ```bash
-./install_oh_my_zsh.sh
+./install_oh_my_zsh_1.sh
+./install_oh_my_zsh_2.sh
 ```
 
 Install Ansible:
