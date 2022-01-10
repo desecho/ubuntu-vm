@@ -8,7 +8,6 @@
 Open VM settings
 
 * User Interface → Uncheck Show in Full-screen/Seamless
-* Display → Enable 3D Acceleration
 * Display → Graphics controller → VBoxSVGA
 * System → Motherboard → Base Memory → Set to the desired value
 * System → Processor → Select the maximum number of cores you have
