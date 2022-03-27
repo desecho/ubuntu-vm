@@ -20,6 +20,7 @@ Install Ubuntu Desktop. Choose minimal installation.
 ## Setup/Configuration
 
 Run
+
 ```bash
 USERNAME="[username]"
 sudo su
@@ -41,6 +42,7 @@ Remove from favorites:
 * Help
 
 Create a key with
+
 ```bash
 EMAIL="[email]"
 ssh-keygen -t rsa -C "$EMAIL" -N ""
@@ -50,19 +52,23 @@ cat ~/.ssh/id_rsa.pub
 Add key on the GitHub [SSH and GPG keys settings page](https://github.com/settings/keys)
 
 Then run
+
 ```bash
 git clone git@github.com:desecho/ubuntu-vm.git
 ```
 
 If you want to install [VS Code](https://code.visualstudio.com/) run
+
 ```bash
 vs_code/install_vs_code.sh
 ```
 
 If you have a 4K display and the cursor size is not right run
+
 ```bash
 sudo apt install dconf-editor
 ```
+
 Run Dconf Editor, go to org → gnome → desktop → interface → cursor-size → change the value accordingly.
 
 Note: Value `21` worked for my setup
@@ -70,23 +76,27 @@ Note: Value `21` worked for my setup
 To configure scaling, open Screen Display, and select scale.
 
 If you want to enable the "Dash to panel" GNOME extension run
+
 ```bash
 sudo apt install gnome-tweak-tool gnome-shell-extension-dash-to-panel -y
 sudo reboot
 ```
 
 Run Tweaks
+
 * Disable animations
 * Extensions → enable "Dash to panel"
 * "Dash to panel" settings → Behavior → enable Isolate Workspaces
 
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
+
 ```bash
 ./install_oh_my_zsh_1.sh
 ./install_oh_my_zsh_2.sh
 ```
 
 Install Ansible:
+
 ```bash
 ansible/install_ansible.sh
 ```
@@ -96,6 +106,7 @@ Then you need to configure the variables in `ansible/vars.yml`.
 You might also want to change variables in `ansible/roles/main/defaults/main.yml`.
 
 Then run
+
 ```bash
 ansible/provision.sh
 sudo reboot
@@ -110,15 +121,18 @@ To prevent screen from going to sleep mode or locking, open Settings.
 ## Included packages
 
 ### Languages
+
 * [Python](https://www.python.org/)
 * [Go](https://golang.org/)
 * [Node.js](https://nodejs.org/en/)
 
 ### Package Managers
+
 * [pip](https://pypi.org/project/pip/)
 * [yarn](https://yarnpkg.com/)
 
 ### Utils
+
 * [Ansible](https://www.ansible.com/)
 * [Terminator](https://gnome-terminator.org/)
 * [Midnight Commander](https://midnight-commander.org/)
@@ -143,24 +157,30 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [shfmt](https://github.com/mvdan/sh)
 
 ### Monitoring
+
 * [bpytop](https://github.com/aristocratos/bpytop)
 * [iftop](https://linux.die.net/man/8/iftop)
 * [iotop](https://linux.die.net/man/1/iotop)
 
 ### Kubernetes
+
 * [kubectl](https://kubernetes.io/docs/reference/kubectl/)
 * [Helm](https://helm.sh/)
 
 ### Databases
+
 * [mysql-client](https://dev.mysql.com/doc/refman/8.0/en/mysql.html)
 * [DBeaver](https://dbeaver.io/)
 
 ### Docker
+
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Docker](https://www.docker.com/)
 
 ### Digital Ocean
+
 * [doctl](https://docs.digitalocean.com/reference/doctl/)
 
 ### Browsers
+
 * [Chromium](https://www.chromium.org/Home)
