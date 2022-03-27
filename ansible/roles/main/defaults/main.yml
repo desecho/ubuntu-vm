@@ -24,6 +24,7 @@ pip_packages:
 npm_packages:
   - yarn
   - fx
+  - markdownlint-cli
 
 docker_requirements:
   - apt-transport-https
