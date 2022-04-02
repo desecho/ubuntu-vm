@@ -30,5 +30,7 @@
     "[markdown]": {
       "editor.defaultFormatter": "yzhang.markdown-all-in-one",
       "editor.formatOnSave": true
-    }
+    },
+    "editor.mouseWheelZoom": true,
+    "window.zoomLevel": 2
 }
