@@ -1,6 +1,6 @@
 # shellcheck disable=SC2148
 
-# Custom names are for `getsecret`, `fastpush`, `fastcommit`, `fastamend`.
+# Custom names are for `getsecret`, `fastpush`, `fastcommit`.
 # These are the names which don't start with the command they are calling.
 
 # Kubectl
@@ -48,6 +48,7 @@ function gmaster() {
 alias gamend="git add . && git commit --amend --no-edit"
 alias gl="git log --oneline --decorate"
 alias gcm="git commit -m"
+alias gcam="git add . && git commit -m"
 alias gpush!="git push --force-with-lease"
 alias gpush="git push"
 alias gstash="git stash"
@@ -61,7 +62,6 @@ alias grc="git rebase --continue"
 alias gri="git rebase -i"
 alias fastcommit="git add . && git commit -m'Changes'"
 alias fastpush="fastcommit && git push"
-alias fastamend="git add . && git commit --amend --no-edit"
 
 #------------------------------------------------------------------------------
 # Replacements
