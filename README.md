@@ -2,7 +2,7 @@
 
 ## Create VM and Install Ubuntu
 
-* Download [Ubuntu Live CD](https://www.ubuntu.com/download/desktop)
+* Download [Ubuntu Desktop](https://www.ubuntu.com/download/desktop)
 * Create a new VM
 
 Open VM settings
