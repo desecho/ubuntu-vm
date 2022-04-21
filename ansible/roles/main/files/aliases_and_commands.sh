@@ -31,7 +31,7 @@ function _get_default_branch() {
     git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 }
 
-function grm() {
+function grmaster() {
     current_branch=$(git branch --show-current)
     default_branch=$(_get_default_branch)
     git switch "$default_branch"
