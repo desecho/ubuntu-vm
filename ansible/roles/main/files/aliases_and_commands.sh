@@ -1,3 +1,4 @@
+#!/bin/bash
 # shellcheck disable=SC2148
 
 # Custom names are for `getsecret`, `fastpush`, `fastcommit`.
