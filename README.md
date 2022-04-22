@@ -1,10 +1,10 @@
-# Ubuntu 22.04 VM in VMware Workstation Player 
+# Ubuntu 22.04 VM in VMware Workstation Player
 
 ## Create VM and Install Ubuntu
 
 * Download [Ubuntu Desktop](https://www.ubuntu.com/download/desktop)
 * Download [VMware Workstation Player](https://www.vmware.com/ca/products/workstation-player/workstation-player-evaluation.html)
-* open `%APPDATA%\VMware\preferences.ini` and add 
+* open `%APPDATA%\VMware\preferences.ini` and add
 
 ```ini
 pref.vmplayer.fullscreen.nobar = "TRUE"
@@ -16,7 +16,7 @@ pref.vmplayer.fullscreen.nobar = "TRUE"
 
 ## Setup/Configuration
 
-Run
+Run terminal and set grey on black color scheme. Then run
 
 ```bash
 sudo su
@@ -51,7 +51,7 @@ If you want to install [VS Code](https://code.visualstudio.com/) run
 vs_code/install_vs_code.sh
 ```
 
-If you want to install the "Dash to panel" GNOME extension run:
+If you want to install the "Dash to panel" GNOME extension run
 
 ```bash
 sudo apt install gnome-shell-extensions-y
@@ -70,8 +70,8 @@ If necessary - logout and log back in.
 
 Run Extensions.
 
-* Extensions → enable "Dash to panel"
-* "Dash to panel" settings → Behavior → enable Isolate Workspaces
+* Extensions → enable `Dash to panel`
+* `Dash to panel` settings → `Behavior` → enable `Isolate Workspaces`
 
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 
@@ -99,9 +99,9 @@ sudo reboot
 
 To prevent screen from going to sleep mode or locking, open Settings.
 
-* Power → Blank screen → Never
-* Privacy → Screen Lock → Automatic Screen Lock → Off
-* Privacy → Screen Lock → Lock Screen on Suspend → Off
+* Power → `Screen blank` → `Never`
+* Privacy → `Screen` → `Automatic Screen Lock` → `Off`
+* Privacy → `Screen` → `Lock Screen on Suspend` → `Off`
 
 ## Included packages
 
@@ -119,7 +119,6 @@ To prevent screen from going to sleep mode or locking, open Settings.
 ### Utils
 
 * [Ansible](https://www.ansible.com/)
-* [Terminator](https://gnome-terminator.org/)
 * [Midnight Commander](https://midnight-commander.org/)
 * [curl](https://curl.se/)
 * [tox](https://tox.readthedocs.io/en/latest/)

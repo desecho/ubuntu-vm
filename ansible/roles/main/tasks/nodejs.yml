@@ -1,5 +1,5 @@
 - name: Prepare Node.js installation
-  shell: curl -fsSL https://deb.nodesource.com/setup_15.x | bash -
+  shell: "curl -fsSL https://deb.nodesource.com/setup_{{ nodejs_version }} | bash -"
   args:
     warn: no
 

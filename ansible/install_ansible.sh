@@ -8,7 +8,7 @@ ANSIBLE_VERSION=3.1.0
 sudo apt install python3-pip libffi-dev g++ libssl-dev -y
 
 # Additional requirements
-sudo apt install -y python-apt aptitude
+sudo apt install -y python3-apt aptitude
 
 LC_ALL=C
 
