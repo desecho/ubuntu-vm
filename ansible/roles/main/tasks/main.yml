@@ -19,6 +19,7 @@
 - include: exa.yml
 - include: yh.yml
 - include: shfmt.yml
+- include: hadolint.yml
 
 - include: aliases_and_commands.yml
 - include: misc.yml

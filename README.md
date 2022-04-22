@@ -141,6 +141,7 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [yamllint](https://github.com/adrienverge/yamllint)
 * [restructuredtext-lint](https://pypi.org/project/restructuredtext-lint/)
 * [JSON Lint](https://github.com/zaach/jsonlint)
+* [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint/)
 
 ### Monitoring
 

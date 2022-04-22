@@ -1,0 +1,7 @@
+---
+- name: Install hadolint
+  get_url:
+    url: "https://github.com/hadolint/hadolint/releases/download/v{{ hadolint_version }}/hadolint-Linux-x86_64"
+    dest: /usr/local/bin/hadolint
+    owner: root
+    mode: "755"

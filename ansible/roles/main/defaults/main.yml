@@ -50,6 +50,7 @@ helm_version: 3.5.3
 yq_version: 4.6.3
 yh_version: 0.4.0
 shfmt_version: 3.4.0
+hadolint_version: 2.10.0
 
 default_editor: nano
 
