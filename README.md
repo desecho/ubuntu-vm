@@ -1,45 +1,32 @@
-# Ubuntu 20.04 VM in Virtualbox
+# Ubuntu 22.04 VM in VMware Workstation Player 
 
 ## Create VM and Install Ubuntu
 
 * Download [Ubuntu Desktop](https://www.ubuntu.com/download/desktop)
-* Create a new VM
+* Download [VMware Workstation Player](https://www.vmware.com/ca/products/workstation-player/workstation-player-evaluation.html)
+* open `%APPDATA%\VMware\preferences.ini` and add 
 
-Open VM settings
+```ini
+pref.vmplayer.fullscreen.nobar = "TRUE"
+```
 
-* User Interface → Uncheck Show in Full-screen/Seamless
-* Display → Graphics controller → VBoxSVGA
-* System → Motherboard → Base Memory → Set to the desired value
-* System → Processor → Select the maximum number of cores you have
-* General → Advanced
-  * Shared Clipboard → Bidirectional
-  * Drag'n'Drop → Bidirectional
-
-Install Ubuntu Desktop. Choose minimal installation.
+* Change memory and processors settings
+* In display settings, set recommended video memory
+* Install Ubuntu. Choose minimal installation and not to install Third-party drivers.
 
 ## Setup/Configuration
 
 Run
 
 ```bash
-USERNAME="[username]"
 sudo su
+USERNAME="[username]"
 echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 apt update
 apt upgrade -y
-apt install git make gcc perl -y
+apt install git -y
+exit
 ```
-
-* Select Devices → Insert Guest Additions CD image
-
-Run the autostart script (it will pop up).
-
-* Select Devices → Optical Drives → Remove disk from virtual drive
-* Restart the VM
-
-Remove from favorites:
-
-* Help
 
 Create a key with
 
@@ -55,6 +42,7 @@ Then run
 
 ```bash
 git clone git@github.com:desecho/ubuntu-vm.git
+cd ubuntu-vm
 ```
 
 If you want to install [VS Code](https://code.visualstudio.com/) run
@@ -63,28 +51,25 @@ If you want to install [VS Code](https://code.visualstudio.com/) run
 vs_code/install_vs_code.sh
 ```
 
-If you have a 4K display and the cursor size is not right run
+If you want to install the "Dash to panel" GNOME extension run:
 
 ```bash
-sudo apt install dconf-editor
+sudo apt install gnome-shell-extensions-y
 ```
 
-Run Dconf Editor, go to org → gnome → desktop → interface → cursor-size → change the value accordingly.
-
-Note: Value `21` worked for my setup
-
-To configure scaling, open Screen Display, and select scale.
-
-If you want to enable the "Dash to panel" GNOME extension run
+* Download [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/) extension
+* Run:
 
 ```bash
-sudo apt install gnome-tweak-tool gnome-shell-extension-dash-to-panel -y
-sudo reboot
+ARCHIVE=[archive-name.zip]
+DIR=~/.local/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com
+unzip $ARCHIVE -d $DIR
 ```
 
-Run Tweaks
+If necessary - logout and log back in.
 
-* Disable animations
+Run Extensions.
+
 * Extensions → enable "Dash to panel"
 * "Dash to panel" settings → Behavior → enable Isolate Workspaces
 
