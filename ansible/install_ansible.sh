@@ -13,4 +13,4 @@ sudo apt install -y python3-apt aptitude
 LC_ALL=C
 
 # Install ansible
-sudo pip3 install ansible==$ANSIBLE_VERSION
+sudo pip3 install ansible=="${ANSIBLE_VERSION}"
