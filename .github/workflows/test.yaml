@@ -1,0 +1,37 @@
+---
+name: Test
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 15.x
+          registry-url: https://registry.npmjs.org
+
+      - name: Install test requirements
+        run: |
+          make install-shfmt
+          sudo apt install shellcheck -y
+          npm install markdownlint-cli jsonlint -g
+          pip install yamllint
+
+      - name: Run tests
+        run: make lint

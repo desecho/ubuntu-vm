@@ -1,3 +1,4 @@
+---
 - name: Add aliases and commands
   blockinfile:
     dest: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"

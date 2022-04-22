@@ -1,3 +1,4 @@
+---
 - name: Check if Helm has been installed already
   stat:
     path: /usr/local/bin/helm

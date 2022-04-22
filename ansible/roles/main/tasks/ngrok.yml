@@ -1,3 +1,4 @@
+---
 - name: Install ngrok
   unarchive:
     src: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
@@ -9,7 +10,7 @@
 - name: Ensure we have ngrok config directory
   file: path="{{ lookup('env', 'HOME') }}/.ngrok2" state=directory
 
-- name: Add config
+- name: Add ngrok config
   template:
     src: config.yaml
     dest: "{{ lookup('env', 'HOME') }}/.ngrok2/ngrok.yml"

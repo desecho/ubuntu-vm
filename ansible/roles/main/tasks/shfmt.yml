@@ -1,3 +1,4 @@
+---
 - name: Install shfmt
   get_url:
     url: "https://github.com/mvdan/sh/releases/download/v{{ shfmt_version }}/shfmt_v{{ shfmt_version }}_linux_amd64"

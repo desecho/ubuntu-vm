@@ -1,3 +1,4 @@
+---
 - name: Install kubectl
   get_url:
     url: "https://dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
@@ -5,7 +6,7 @@
     owner: root
     mode: "755"
 
-- name: Set editor
+- name: Set kubectl editor
   lineinfile:
     path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
     regexp: export KUBE_EDITOR="{{ default_editor }}"

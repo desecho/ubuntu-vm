@@ -54,16 +54,16 @@ vs_code/install_vs_code.sh
 If you want to install the "Dash to panel" GNOME extension run
 
 ```bash
-sudo apt install gnome-shell-extensions-y
+make install-gnome-shell-extensions
 ```
 
 * Download [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/) extension
 * Run:
 
 ```bash
-ARCHIVE=[archive-name.zip]
+ARCHIVE="[archive-name.zip]"
 DIR=~/.local/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com
-unzip $ARCHIVE -d $DIR
+unzip "$ARCHIVE" -d "$DIR"
 ```
 
 If necessary - logout and log back in.
@@ -76,14 +76,13 @@ Run Extensions.
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 
 ```bash
-./install_oh_my_zsh_1.sh
-./install_oh_my_zsh_2.sh
+make install-oh-my-zsh
 ```
 
 Install Ansible:
 
 ```bash
-ansible/install_ansible.sh
+make install
 ```
 
 Then you need to configure the variables in `ansible/vars.yml`.
@@ -93,7 +92,7 @@ You might also want to change variables in `ansible/roles/main/defaults/main.yml
 Then run
 
 ```bash
-ansible/provision.sh
+make provision
 sudo reboot
 ```
 
@@ -139,6 +138,9 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [yh](https://github.com/andreazorzetto/yh)
 * [shellcheck](https://www.shellcheck.net/)
 * [shfmt](https://github.com/mvdan/sh)
+* [yamllint](https://github.com/adrienverge/yamllint)
+* [restructuredtext-lint](https://pypi.org/project/restructuredtext-lint/)
+* [JSON Lint](https://github.com/zaach/jsonlint)
 
 ### Monitoring
 

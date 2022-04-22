@@ -1,3 +1,4 @@
+---
 - name: Install Go
   unarchive:
     src: "https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz"

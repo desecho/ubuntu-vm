@@ -4,18 +4,18 @@
 # These are the names which don't start with the command they are calling.
 
 # Kubectl
-function getsecret(){
+function getsecret() {
     kubectl get secret "$1" -o json | jq -r ".data.$2" | base64 -d
 }
 
-function kti(){
+function kti() {
     kubectl exec -ti "$1" -- sh
 }
 
 #------------------------------------------------------------------------------
 
 # Docker
-function dockerti(){
+function dockerti() {
     docker exec -ti "$1" sh
 }
 

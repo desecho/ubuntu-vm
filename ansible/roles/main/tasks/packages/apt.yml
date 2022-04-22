@@ -1,3 +1,4 @@
+---
 - name: Ensure required apt packages are present
   apt:
     name: "{{ apt_packages }}"

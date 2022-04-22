@@ -1,3 +1,4 @@
+---
 - name: Add git config
   template:
     src: .gitconfig

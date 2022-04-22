@@ -1,3 +1,4 @@
+---
 apt_packages:
   - curl
   - unattended-upgrades
@@ -14,6 +15,7 @@ apt_packages:
   - iotop
   - bat
   - shellcheck
+  - exa
 
 pip_packages:
   - tox
@@ -21,11 +23,13 @@ pip_packages:
   - bpytop
   - thefuck
   - yamllint
+  - restructuredtext_lint
 
 npm_packages:
   - yarn
   - fx
   - markdownlint-cli
+  - jsonlint
 
 docker_requirements:
   - apt-transport-https
@@ -44,7 +48,6 @@ go_version: 1.16.2
 python_version: "3.10"
 helm_version: 3.5.3
 yq_version: 4.6.3
-exa_version: 0.10.1
 yh_version: 0.4.0
 shfmt_version: 3.4.0
 

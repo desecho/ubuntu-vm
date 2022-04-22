@@ -1,3 +1,4 @@
+---
 1-click:
   install:
     1-clicks: []
@@ -89,7 +90,7 @@ cdn:
     force: false
   flush:
     files:
-    - '*'
+      - '*'
   get:
     format: ""
     no-header: false

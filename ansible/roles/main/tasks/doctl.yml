@@ -1,3 +1,4 @@
+---
 - name: Install doctl
   community.general.snap:
     name: doctl
@@ -5,7 +6,7 @@
 - name: Ensure we have doctl config directory
   file: path="{{ lookup('env', 'HOME') }}/.config/doctl" state=directory
 
-- name: Add config
+- name: Add doctl config
   template:
     src: config.yaml
     dest: "{{ lookup('env', 'HOME') }}/.config/doctl/config.yaml"

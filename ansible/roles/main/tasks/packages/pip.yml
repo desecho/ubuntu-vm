@@ -1,3 +1,4 @@
+---
 - name: Install global pip packages
   pip:
     name: "{{ pip_packages }}"

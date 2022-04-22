@@ -1,3 +1,4 @@
+---
 - name: Main provisioning playbook
   hosts: all
   become: yes

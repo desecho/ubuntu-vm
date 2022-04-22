@@ -1,3 +1,4 @@
+---
 - name: Prepare Node.js installation
   shell: "curl -fsSL https://deb.nodesource.com/setup_{{ nodejs_version }} | bash -"
   args:
