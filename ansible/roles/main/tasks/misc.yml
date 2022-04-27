@@ -18,3 +18,30 @@
     path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
     regexp: "export EDITOR={{ default_editor }}"
     line: "export EDITOR={{ default_editor }}"
+
+- name: Remove unnecessary directories
+  block:
+    - name: Remove Documents directory
+      ansible.builtin.file:
+        path: "{{ lookup('env', 'HOME') }}/Documents"
+        state: absent
+
+    - name: Remove Music directory
+      ansible.builtin.file:
+        path: "{{ lookup('env', 'HOME') }}/Music"
+        state: absent
+
+    - name: Remove Public directory
+      ansible.builtin.file:
+        path: "{{ lookup('env', 'HOME') }}/Public"
+        state: absent
+
+    - name: Remove Templates directory
+      ansible.builtin.file:
+        path: "{{ lookup('env', 'HOME') }}/Templates"
+        state: absent
+
+    - name: Remove Videos directory
+      ansible.builtin.file:
+        path: "{{ lookup('env', 'HOME') }}/Videos"
+        state: absent
