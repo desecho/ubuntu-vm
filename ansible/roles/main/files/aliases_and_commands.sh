@@ -67,7 +67,7 @@ alias fastpush="fastcommit && git push"
 #------------------------------------------------------------------------------
 # Other
 
-function forcekill(){
+function forcekill() {
     pkill -f "$1"
 }
 
