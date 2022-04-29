@@ -65,6 +65,13 @@ alias fastcommit="git add . && git commit -m'Changes'"
 alias fastpush="fastcommit && git push"
 
 #------------------------------------------------------------------------------
+# Other
+
+function forcekill(){
+    pkill -f "$1"
+}
+
+#------------------------------------------------------------------------------
 # Replacements
 alias ls=exa
 alias cat=batcat
