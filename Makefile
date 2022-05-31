@@ -15,9 +15,9 @@ install-shfmt:
 	sudo curl https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 -Lo ${SHFMT_PATH}
 	sudo chmod +x ${SHFMT_PATH}
 
-.PHONY: install
+.PHONY: install-ansible
 ## Install Ansible
-install:
+install-ansible:
 	ansible/install_ansible.sh
 
 ## Install gnome-shell-extensions
