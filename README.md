@@ -82,7 +82,7 @@ make install-oh-my-zsh
 Install Ansible:
 
 ```bash
-make install
+make install-ansible
 ```
 
 Then you need to configure the variables in `ansible/vars.yml`.
