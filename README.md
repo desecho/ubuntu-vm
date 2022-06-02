@@ -16,7 +16,7 @@ pref.vmplayer.fullscreen.nobar = "TRUE"
 
 ## Setup/Configuration
 
-Run terminal and set grey on black color scheme. Then run
+Run terminal and set white on black color scheme. Then run
 
 ```bash
 sudo su
