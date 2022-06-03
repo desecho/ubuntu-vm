@@ -48,7 +48,7 @@ cd ubuntu-vm
 If you want to install [VS Code](https://code.visualstudio.com/) run
 
 ```bash
-vs_code/install_vs_code.sh
+make install-vs-code
 ```
 
 If you want to install the "Dash to panel" GNOME extension run

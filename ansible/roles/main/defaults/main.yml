@@ -31,6 +31,7 @@ npm_packages:
   - markdownlint-cli
   - jsonlint
   - markdown-link-check
+  - json2yaml
 
 docker_requirements:
   - apt-transport-https

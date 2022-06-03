@@ -28,6 +28,10 @@ install-gnome-shell-extensions:
 install-oh-my-zsh:
 	oh_my_zsh/install_oh_my_zsh_1.sh
 	oh_my_zsh/install_oh_my_zsh_2.sh
+
+## Install VS Code
+install-vs-code:
+	vs_code/install_vs_code.sh
 #------------------------------------
 
 #------------------------------------
