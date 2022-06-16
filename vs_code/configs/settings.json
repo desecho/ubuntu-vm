@@ -24,6 +24,7 @@
       "search.action.clearSearchResults",
       "workbench.action.closeAllEditors",
       "workbench.view.explorer",
+      "workbench.debug.viewlet.action.removeAllBreakpoints",
       "list.collapseAll"
     ]
   },
