@@ -68,14 +68,15 @@ lint:
 	shfmt -l -d .
 	scripts/shellcheck.sh
 	markdownlint README.md
-	yamllint .github ansible
-	scripts/jsonlint.sh lint
 	actionlint
+	prettier --check ./.github/**/*.yaml ./**/*.yaml
+	prettier --check ./**/*.json
 
 .PHONY: format
 ## Format files
 format:
 	shfmt -l -w .
 	markdownlint README.md --fix
-	scripts/jsonlint.sh format
+	prettier --write ./.github/**/*.yaml ./**/*.yaml
+	prettier --write ./**/*.json
 #------------------------------------

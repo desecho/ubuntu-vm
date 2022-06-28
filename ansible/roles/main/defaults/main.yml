@@ -22,14 +22,13 @@ pip_packages:
   - docker-compose
   - bpytop
   - thefuck
-  - yamllint
   - restructuredtext_lint
 
 npm_packages:
   - yarn
   - fx
   - markdownlint-cli
-  - jsonlint
+  - prettier
   - markdown-link-check
   - json2yaml
 

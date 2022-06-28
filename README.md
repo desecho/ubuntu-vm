@@ -128,7 +128,6 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [yq](https://mikefarah.gitbook.io/yq/)
 * [pwgen](https://linux.die.net/man/1/pwgen)
 * [S3cmd](https://s3tools.org/s3cmd)
-* [ngrok](https://ngrok.com/)
 * [ncdu](https://dev.yorhel.nl/ncdu)
 * [thefuck](https://github.com/nvbn/thefuck)
 * [Unattended Upgrades](https://wiki.debian.org/UnattendedUpgrades)
@@ -138,11 +137,11 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [yh](https://github.com/andreazorzetto/yh)
 * [shellcheck](https://www.shellcheck.net/)
 * [shfmt](https://github.com/mvdan/sh)
-* [yamllint](https://github.com/adrienverge/yamllint)
 * [restructuredtext-lint](https://pypi.org/project/restructuredtext-lint/)
-* [JSON Lint](https://github.com/zaach/jsonlint)
 * [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint/)
 * [markdown-link-check](https://github.com/tcort/markdown-link-check)
+* [Prettier](https://prettier.io/)
+<!-- * [ngrok](https://ngrok.com/) -->
 
 ### Monitoring
 

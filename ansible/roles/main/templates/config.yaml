@@ -90,7 +90,7 @@ cdn:
     force: false
   flush:
     files:
-      - '*'
+      - "*"
   get:
     format: ""
     no-header: false

@@ -12,7 +12,7 @@
 - include: tflint.yml
 - include: helm.yml
 - include: yq.yml
-- include: ngrok.yml
+# - include: ngrok.yml
 - include: dbeaver.yml
 - include: doctl.yml
 - include: s3cmd.yml

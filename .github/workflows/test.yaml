@@ -28,8 +28,7 @@ jobs:
         run: |
           make install-linters-binaries
           sudo apt install shellcheck -y
-          npm install markdownlint-cli jsonlint -g
-          pip install yamllint
+          npm install markdownlint-cli prettier -g
 
       - name: Run tests
         run: make lint
