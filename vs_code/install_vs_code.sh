@@ -33,3 +33,4 @@ code --install-extension yzhang.markdown-all-in-one
 code --install-extension trond-snekvik.simple-rst
 code --install-extension octref.vetur
 code --install-extension batisteo.vscode-django
+code --install-extension Vue.volar
