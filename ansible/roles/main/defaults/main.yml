@@ -31,6 +31,8 @@ npm_packages:
   - prettier
   - markdown-link-check
   - json2yaml
+  - @vue/cli
+
 
 docker_requirements:
   - apt-transport-https
