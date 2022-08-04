@@ -65,7 +65,7 @@ install-vs-code:
 .PHONY: provision
 ## Provision | Commands
 provision:
-	$(call print,Provisionning)
+	$(call print,Provisioning)
 	@ansible/provision.sh
 
 .PHONY: lint

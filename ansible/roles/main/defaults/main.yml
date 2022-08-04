@@ -22,7 +22,6 @@ pip_packages:
   - docker-compose
   - bpytop
   - thefuck
-  - restructuredtext_lint
 
 npm_packages:
   - yarn
@@ -31,8 +30,7 @@ npm_packages:
   - prettier
   - markdown-link-check
   - json2yaml
-  - @vue/cli
-
+  - "@vue/cli"
 
 docker_requirements:
   - apt-transport-https
