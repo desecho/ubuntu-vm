@@ -16,7 +16,6 @@
 - include: dbeaver.yml
 - include: doctl.yml
 - include: s3cmd.yml
-- include: exa.yml
 - include: yh.yml
 - include: shfmt.yml
 - include: hadolint.yml
