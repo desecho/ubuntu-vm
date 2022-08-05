@@ -76,7 +76,8 @@ Run Extensions.
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 
 ```bash
-make install-oh-my-zsh
+make install-oh-my-zsh-1
+make install-oh-my-zsh-2
 ```
 
 Install Ansible:

@@ -47,10 +47,16 @@ install-gnome-shell-extensions:
 	$(call print,Installing gnome-shell-extensions)
 	@sudo apt install gnome-shell-extensions -y
 
-## Install Oh My Zsh
-install-oh-my-zsh:
-	$(call print,Installing Oh My Zsh)
+.PHONY: install-oh-my-zsh-1
+## Install Oh My Zsh (1)
+install-oh-my-zsh-1:
+	$(call print,Installing Oh My Zsh Part 1)
 	@oh_my_zsh/install_oh_my_zsh_1.sh
+
+.PHONY: install-oh-my-zsh-2
+## Install Oh My Zsh (2)
+install-oh-my-zsh-2:
+	$(call print,Installing Oh My Zsh Part 2)
 	@oh_my_zsh/install_oh_my_zsh_2.sh
 
 ## Install VS Code
