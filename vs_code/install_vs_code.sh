@@ -35,3 +35,4 @@ code --install-extension octref.vetur
 code --install-extension batisteo.vscode-django
 code --install-extension Vue.volar
 code --install-extension Vue.vscode-typescript-vue-plugin
+code --install-extension bungcip.better-toml
