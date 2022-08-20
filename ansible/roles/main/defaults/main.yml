@@ -22,6 +22,8 @@ pip_packages:
   - docker-compose
   - bpytop
   - thefuck
+  - poetry
+  - tox-poetry
 
 npm_packages:
   - yarn

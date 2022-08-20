@@ -142,6 +142,8 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint/)
 * [markdown-link-check](https://github.com/tcort/markdown-link-check)
 * [Prettier](https://prettier.io/)
+* [Poetry](https://pypi.org/project/poetry/)
+* [tox-poetry](https://pypi.org/project/tox-poetry/)
 <!-- * [ngrok](https://ngrok.com/) -->
 
 ### Monitoring
