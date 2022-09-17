@@ -6,7 +6,7 @@
 
 # Kubectl
 function getsecret() {
-    kubectl get secret "$1" -o json | jq -r ".data.$2" | base64 -d
+    kubectl get secrets "$1" -o json | jq '.data | map_values(@base64d)'
 }
 
 function kti() {
