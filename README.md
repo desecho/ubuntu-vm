@@ -24,7 +24,7 @@ USERNAME="[username]"
 echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 apt update
 apt upgrade -y
-apt install git -y
+apt install git make -y
 exit
 ```
 
@@ -63,6 +63,7 @@ make install-gnome-shell-extensions
 ```bash
 ARCHIVE="[archive-name.zip]"
 DIR=~/.local/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com
+mkdir -p $DIR
 unzip "$ARCHIVE" -d "$DIR"
 ```
 
@@ -95,6 +96,18 @@ Then run
 ```bash
 make provision
 sudo reboot
+```
+
+Install Homebrew:
+
+```bash
+make install-homebrew
+```
+
+Install Homebrew packages
+
+```bash
+make install-brew-pkgs
 ```
 
 To prevent screen from going to sleep mode or locking, open Settings.
@@ -144,6 +157,9 @@ To prevent screen from going to sleep mode or locking, open Settings.
 * [Prettier](https://prettier.io/)
 * [Poetry](https://pypi.org/project/poetry/)
 * [tox-poetry](https://pypi.org/project/tox-poetry/)
+* [Homebrew](http://brew.sh/)
+* [jqp](https://github.com/noahgorstein/jqp)
+
 <!-- * [ngrok](https://ngrok.com/) -->
 
 ### Monitoring

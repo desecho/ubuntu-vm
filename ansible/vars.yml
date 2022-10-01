@@ -4,8 +4,8 @@ email:
 
 # Tokens/secrets.
 digitalocean_token:
-spaces_secret_key:
 spaces_access_key:
+spaces_secret_key:
 # ngrok_token:
 
 shell: zsh
