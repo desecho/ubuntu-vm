@@ -1,4 +1,8 @@
 ---
+- name: Add apt repository for latest Python version
+  apt_repository:
+    repo: ppa:deadsnakes/ppa
+
 - name: Install Python
   apt:
     name: "python{{ python_version }}"
