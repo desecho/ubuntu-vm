@@ -71,6 +71,9 @@ function forcekill() {
     pkill -f "$1"
 }
 
+alias kctx="rm -f ~/.kube/config.lock && kubectx"
+alias measure="/usr/bin/time -p"
+
 #------------------------------------------------------------------------------
 # Replacements
 alias ls=exa
