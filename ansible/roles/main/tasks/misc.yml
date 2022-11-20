@@ -1,4 +1,11 @@
 ---
+- name: Fix error popup on startup
+  lineinfile:
+    path: /etc/default/apport
+    regexp: enabled=1
+    line: enabled=0
+  become: yes
+
 - name: Add git config
   template:
     src: .gitconfig
@@ -6,12 +13,6 @@
     owner: "{{ lookup('env', 'USER') }}"
     mode: "600"
   when: full_name and email
-
-- name: Fix error popup on startup
-  lineinfile:
-    path: /etc/default/apport
-    regexp: enabled=1
-    line: enabled=0
 
 - name: Set default editor
   lineinfile:

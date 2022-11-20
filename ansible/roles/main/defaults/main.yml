@@ -34,6 +34,9 @@ npm_packages:
   - json2yaml
   - "@vue/cli"
 
+brew_packages:
+  - noahgorstein/tap/jqp
+
 docker_requirements:
   - apt-transport-https
   - ca-certificates
@@ -46,14 +49,14 @@ docker_packages:
   - containerd.io
 
 nodejs_version: 18.x
-kubectl_version: 1.20.4
-go_version: 1.16.2
+kubectl_version: 1.25.4
+go_version: 1.19.3
 python_version: "3.11"
-helm_version: 3.5.3
-yq_version: 4.6.3
+helm_version: 3.10.2
+yq_version: 4.30.4
 yh_version: 0.4.0
-shfmt_version: 3.4.0
-hadolint_version: 2.10.0
+shfmt_version: 3.5.1
+hadolint_version: 2.12.0
 
 default_editor: nano
 

@@ -21,7 +21,7 @@ Run terminal and set white on black color scheme. Then run
 ```bash
 sudo su
 USERNAME="[username]"
-echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+echo "${USERNAME} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 apt update
 apt upgrade -y
 apt install git make -y
@@ -63,8 +63,8 @@ make install-gnome-shell-extensions
 ```bash
 ARCHIVE="[archive-name.zip]"
 DIR=~/.local/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com
-mkdir -p $DIR
-unzip "$ARCHIVE" -d "$DIR"
+mkdir -p ${DIR}
+unzip "${ARCHIVE}" -d "${DIR}"
 ```
 
 If necessary - logout and log back in.
@@ -81,10 +81,11 @@ make install-oh-my-zsh-1
 make install-oh-my-zsh-2
 ```
 
-Install Ansible:
+Install Ansible and Homebrew:
 
 ```bash
 make install-ansible
+make install-homebrew
 ```
 
 Then you need to configure the variables in `ansible/vars.yml`.
@@ -96,18 +97,6 @@ Then run
 ```bash
 make provision
 sudo reboot
-```
-
-Install Homebrew:
-
-```bash
-make install-homebrew
-```
-
-Install Homebrew packages
-
-```bash
-make install-brew-pkgs
 ```
 
 To prevent screen from going to sleep mode or locking, open Settings.

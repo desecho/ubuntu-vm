@@ -1,0 +1,13 @@
+---
+- name: Download yq
+  unarchive:
+    src: "https://github.com/mikefarah/yq/releases/download/v{{ yq_version }}/yq_linux_amd64.tar.gz"
+    remote_src: yes
+    dest: /tmp
+
+- name: Install yq
+  copy:
+    src: /tmp/yq_linux_amd64
+    dest: /usr/local/bin/yq
+    owner: root
+    mode: "755"

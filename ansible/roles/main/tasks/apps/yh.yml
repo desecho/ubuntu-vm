@@ -1,0 +1,13 @@
+---
+- name: Download yh
+  unarchive:
+    src: "https://github.com/andreazorzetto/yh/releases/download/v{{ yh_version }}/yh-linux-amd64.zip"
+    remote_src: yes
+    dest: /tmp
+
+- name: Install yh
+  copy:
+    src: /tmp/yh
+    dest: /usr/local/bin/yh
+    owner: root
+    mode: "755"

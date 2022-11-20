@@ -5,6 +5,7 @@
 
 - name: Ensure we have doctl config directory
   file: path="{{ lookup('env', 'HOME') }}/.config/doctl" state=directory
+  become: no
 
 - name: Add doctl config
   template:
@@ -12,3 +13,4 @@
     dest: "{{ lookup('env', 'HOME') }}/.config/doctl/config.yaml"
     owner: "{{ lookup('env', 'USER') }}"
     mode: "600"
+  become: no

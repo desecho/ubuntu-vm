@@ -5,3 +5,4 @@
     dest: /usr/local/bin/shfmt
     owner: root
     mode: "755"
+    force: yes

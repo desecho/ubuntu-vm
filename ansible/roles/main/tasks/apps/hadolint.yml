@@ -5,3 +5,4 @@
     dest: /usr/local/bin/hadolint
     owner: root
     mode: "755"
+    force: yes

@@ -58,6 +58,12 @@ install-ansible:
 	$(call print,Installing Ansible)
 	@ansible/install_ansible.sh
 
+.PHONY: install-homebrew
+## Install Homebrew
+install-homebrew:
+	$(call print,Installing Homebrew)
+	@scripts/install_homebrew.sh
+
 ## Install gnome-shell-extensions
 install-gnome-shell-extensions:
 	$(call print,Installing gnome-shell-extensions)
@@ -79,18 +85,6 @@ install-oh-my-zsh-2:
 install-vs-code:
 	$(call print,Installing VS Code)
 	@vs_code/install_vs_code.sh
-
-.PHONY: install-homebrew
-## Install Homebrew
-install-homebrew:
-	$(call print,Installing Homebrew)
-	@scripts/install_homebrew.sh
-
-.PHONY: install-brew-pkgs
-## Install Homebrew packages
-install-brew-pkgs:
-	$(call print,Installing Homebrew packages)
-	@scripts/install_brew_pkgs.sh
 
 .PHONY: install-pre-commit
 ## Install pre-commit

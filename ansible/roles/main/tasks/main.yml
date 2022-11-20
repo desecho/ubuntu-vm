@@ -1,24 +1,49 @@
 ---
-- include: nodejs.yml
-- include: python.yml
+- name: Install Node.js
+  import_tasks: nodejs.yml
+  become: yes
 
-- include: packages/apt.yml
-- include: packages/pip.yml
-- include: packages/npm.yml
+- name: Install Python
+  import_tasks: python.yml
+  become: yes
 
-- include: kubectl.yml
-- include: docker.yml
-- include: go.yml
-- include: tflint.yml
-- include: helm.yml
-- include: yq.yml
-# - include: ngrok.yml
-- include: dbeaver.yml
-- include: doctl.yml
-- include: s3cmd.yml
-- include: yh.yml
-- include: shfmt.yml
-- include: hadolint.yml
+- name: Install Go
+  import_tasks: go.yml
+  become: yes
 
-- include: aliases_and_commands.yml
-- include: misc.yml
+- name: Install packages
+  block:
+    - name: Install apt packages
+      import_tasks: packages/apt.yml
+
+    - name: Install pip packages
+      import_tasks: packages/pip.yml
+
+    - name: Install npm packages
+      import_tasks: packages/npm.yml
+
+    - name: Install brew packages
+      import_tasks: packages/brew.yml
+      become: no
+  become: yes
+
+- name: Install apps
+  block:
+    - import_tasks: apps/kubectl.yml
+    - import_tasks: apps/docker.yml
+    - import_tasks: apps/tflint.yml
+    - import_tasks: apps/helm.yml
+    - import_tasks: apps/yq.yml
+    - import_tasks: apps/dbeaver.yml
+    - import_tasks: apps/doctl.yml
+    - import_tasks: apps/s3cmd.yml
+    - import_tasks: apps/yh.yml
+    - import_tasks: apps/shfmt.yml
+    - import_tasks: apps/hadolint.yml
+    # - import_tasks: apps/ngrok.yml
+  become: yes
+
+- name: Set aliases and commands
+  import_tasks: aliases_and_commands.yml
+
+- import_tasks: misc.yml

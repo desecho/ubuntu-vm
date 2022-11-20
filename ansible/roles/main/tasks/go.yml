@@ -12,3 +12,4 @@
     path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
     regexp: export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
     line: export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+  become: no

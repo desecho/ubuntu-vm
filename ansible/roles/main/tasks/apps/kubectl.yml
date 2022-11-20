@@ -5,6 +5,7 @@
     dest: /usr/local/bin/kubectl
     owner: root
     mode: "755"
+    force: yes
 
 - name: Set kubectl editor
   lineinfile:
