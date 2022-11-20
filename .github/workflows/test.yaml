@@ -27,8 +27,7 @@ jobs:
       - name: Install test requirements
         run: |
           make install-linters-binaries
-          sudo apt install shellcheck -y
-          npm install markdownlint-cli prettier -g
+          make install-pre-commit
 
       - name: Run tests
         run: make lint

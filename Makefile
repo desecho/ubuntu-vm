@@ -10,31 +10,47 @@ include makefiles/macros.mk
 BIN_DIR := /usr/local/bin
 
 SHFMT_VERSION := 3.4.3
-SHFMT_PATH    := ${BIN_DIR}/shfmt
+SHFMT_PATH    := $(BIN_DIR)/shfmt
 
 .PHONY: install-shfmt
+## Install shfmt | Installation
 install-shfmt:
 	$(call print,Installing shfmt)
-	@sudo curl https://github.com/mvdan/sh/releases/download/v${SHFMT_VERSION}/shfmt_v${SHFMT_VERSION}_linux_amd64 -Lo ${SHFMT_PATH}
-	@sudo chmod +x ${SHFMT_PATH}
+	@sudo curl https://github.com/mvdan/sh/releases/download/v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_linux_amd64 -Lo $(SHFMT_PATH)
+	@sudo chmod +x $(SHFMT_PATH)
+
+SHELLCHECK_VERSION := 0.8.0
+SHELLCHECK_PATH    := $(BIN_DIR)/shellcheck
+SHELLCHECK_TMP_DIR := $(shell mktemp -d)
+SHELLCHECK_ARCHIVE := shellcheck.tar.xz
+
+.PHONY: install-shellcheck
+## Install shellcheck
+install-shellcheck:
+	$(call print,Installing shellcheck)
+	@cd $(SHELLCHECK_TMP_DIR) \
+		&& curl https://github.com/koalaman/shellcheck/releases/download/v$(SHELLCHECK_VERSION)/shellcheck-v$(SHELLCHECK_VERSION).linux.x86_64.tar.xz -Lo $(SHELLCHECK_ARCHIVE) \
+		&& tar -xf $(SHELLCHECK_ARCHIVE) \
+		&& sudo cp shellcheck-v$(SHELLCHECK_VERSION)/shellcheck $(SHELLCHECK_PATH)
 
 ACTIONLINT_VERSION := 1.6.13
-ACTIONLINT_PATH    := ${BIN_DIR}/actionlint
-ACTIONLINT_URL     := https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz
+ACTIONLINT_PATH    := $(BIN_DIR)/actionlint
+ACTIONLINT_URL     := https://github.com/rhysd/actionlint/releases/download/v$(ACTIONLINT_VERSION)/actionlint_$(ACTIONLINT_VERSION)_linux_amd64.tar.gz
 ACTIONLINT_TMP_DIR := $(shell mktemp -d)
 ACTIONLINT_ARCHIVE := actionlint.tar.gz
 
 .PHONY: install-actionlint
+## Install actionlint
 install-actionlint:
 	$(call print,Installing actionlint)
-	@cd ${ACTIONLINT_TMP_DIR} && \
-	curl ${ACTIONLINT_URL} -Lo ${ACTIONLINT_ARCHIVE} && \
-	tar -xvf ${ACTIONLINT_ARCHIVE} && \
-	sudo mv actionlint ${ACTIONLINT_PATH}
+	@cd $(ACTIONLINT_TMP_DIR) \
+		&& curl $(ACTIONLINT_URL) -Lo $(ACTIONLINT_ARCHIVE) \
+		&& tar -xvf $(ACTIONLINT_ARCHIVE) \
+		&& sudo mv actionlint $(ACTIONLINT_PATH)
 
 .PHONY: install-linters-binaries
 ## Install linters binaries | Installation
-install-linters-binaries: install-shfmt install-actionlint
+install-linters-binaries: install-shfmt install-actionlint install-shellcheck
 
 .PHONY: install-ansible
 ## Install Ansible
@@ -75,6 +91,18 @@ install-homebrew:
 install-brew-pkgs:
 	$(call print,Installing Homebrew packages)
 	@scripts/install_brew_pkgs.sh
+
+.PHONY: install-pre-commit
+## Install pre-commit
+install-pre-commit:
+	$(call print,Installing pre-commit)
+	@sudo pip3 install pre-commit
+
+.PHONY: setup-pre-commit
+## Set up pre-commit. Activate git hooks
+set-up-pre-commit:
+	$(call print,Setting up pre-commit)
+	@pre-commit install
 #------------------------------------
 
 #------------------------------------
@@ -90,12 +118,8 @@ provision:
 ## Run linters
 lint:
 	$(call print,Linting)
-	@shfmt -l -d .
-	@scripts/shellcheck.sh
-	@markdownlint README.md
 	@actionlint
-	@prettier --check ./.github/**/*.yaml ./**/*.yaml
-	@prettier --check ./**/*.json
+	@pre-commit run --all-files
 
 .PHONY: format
 ## Format files

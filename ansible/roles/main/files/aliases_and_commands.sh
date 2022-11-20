@@ -1,8 +1,4 @@
-#!/bin/bash
-# shellcheck disable=SC2148
-
-# Custom names are for `getsecret`, `fastpush`, `fastcommit`.
-# These are the names which don't start with the command they are calling.
+#!/usr/bin/env bash
 
 # Kubectl
 function getsecret() {
@@ -35,20 +31,24 @@ function _get_default_branch() {
 function grmaster() {
     current_branch=$(git branch --show-current)
     default_branch=$(_get_default_branch)
-    git switch "$default_branch"
+    git switch "${default_branch}"
     git pull
-    git switch "$current_branch"
-    git rebase "$default_branch"
+    git switch "${current_branch}"
+    git rebase "${default_branch}"
 }
 
 function gmaster() {
     git switch "$(_get_default_branch)"
     git pull
 }
+alias gmain="gmaster"
 
 alias gamend="git add . && git commit --amend --no-edit"
+alias gcamend="git add . && git commit --amend"
+alias glog="git log"
 alias gl="git log --oneline --decorate"
 alias gcm="git commit -m"
+alias gc="git commit"
 alias gcam="git add . && git commit -m"
 alias gpush!="git push --force-with-lease"
 alias gpush="git push"
@@ -63,6 +63,8 @@ alias grc="git rebase --continue"
 alias gri="git rebase -i"
 alias fastcommit="git add . && git commit -m'Changes'"
 alias fastpush="fastcommit && git push"
+# Does gamend && gpush!
+alias ff!="git add . && git commit --amend --no-edit && git push --force-with-lease"
 
 #------------------------------------------------------------------------------
 # Other
@@ -77,6 +79,4 @@ alias measure="/usr/bin/time -p"
 #------------------------------------------------------------------------------
 # Replacements
 alias ls=exa
-alias cat=batcat
-alias ocat=/usr/bin/cat
 #------------------------------------------------------------------------------

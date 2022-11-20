@@ -2,17 +2,17 @@
 
 ## Create VM and Install Ubuntu
 
-* Download [Ubuntu Desktop](https://www.ubuntu.com/download/desktop)
-* Download [VMware Workstation Player](https://www.vmware.com/ca/products/workstation-player/workstation-player-evaluation.html)
-* open `%APPDATA%\VMware\preferences.ini` and add
+- Download [Ubuntu Desktop](https://www.ubuntu.com/download/desktop)
+- Download [VMware Workstation Player](https://www.vmware.com/ca/products/workstation-player/workstation-player-evaluation.html)
+- open `%APPDATA%\VMware\preferences.ini` and add
 
 ```ini
 pref.vmplayer.fullscreen.nobar = "TRUE"
 ```
 
-* Change memory and processors settings
-* In display settings, set recommended video memory
-* Install Ubuntu. Choose minimal installation and not to install Third-party drivers.
+- Change memory and processors settings
+- In display settings, set recommended video memory
+- Install Ubuntu. Choose minimal installation and not to install Third-party drivers.
 
 ## Setup/Configuration
 
@@ -57,8 +57,8 @@ If you want to install the "Dash to panel" GNOME extension run
 make install-gnome-shell-extensions
 ```
 
-* Download [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/) extension
-* Run:
+- Download [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/) extension
+- Run:
 
 ```bash
 ARCHIVE="[archive-name.zip]"
@@ -71,8 +71,8 @@ If necessary - logout and log back in.
 
 Run Extensions.
 
-* Extensions → enable `Dash to panel`
-* `Dash to panel` settings → `Behavior` → enable `Isolate Workspaces`
+- Extensions → enable `Dash to panel`
+- `Dash to panel` settings → `Behavior` → enable `Isolate Workspaces`
 
 Run this if you want to install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 
@@ -112,81 +112,81 @@ make install-brew-pkgs
 
 To prevent screen from going to sleep mode or locking, open Settings.
 
-* Power → `Screen blank` → `Never`
-* Privacy → `Screen` → `Automatic Screen Lock` → `Off`
-* Privacy → `Screen` → `Lock Screen on Suspend` → `Off`
+- Power → `Screen blank` → `Never`
+- Privacy → `Screen` → `Automatic Screen Lock` → `Off`
+- Privacy → `Screen` → `Lock Screen on Suspend` → `Off`
 
 ## Included packages
 
 ### Languages
 
-* [Python](https://www.python.org/)
-* [Go](https://golang.org/)
-* [Node.js](https://nodejs.org/en/)
+- [Python](https://www.python.org/)
+- [Go](https://golang.org/)
+- [Node.js](https://nodejs.org/en/)
 
 ### Package Managers
 
-* [pip](https://pypi.org/project/pip/)
-* [yarn](https://yarnpkg.com/)
+- [pip](https://pypi.org/project/pip/)
+- [yarn](https://yarnpkg.com/)
 
 ### Utils
 
-* [Ansible](https://www.ansible.com/)
-* [Midnight Commander](https://midnight-commander.org/)
-* [curl](https://curl.se/)
-* [tox](https://tox.readthedocs.io/en/latest/)
-* [net-tools](https://sourceforge.net/projects/net-tools/)
-* [locate](https://www.gnu.org/software/findutils/)
-* [TFLint](https://github.com/terraform-linters/tflint)
-* [jq](https://stedolan.github.io/jq/)
-* [yq](https://mikefarah.gitbook.io/yq/)
-* [pwgen](https://linux.die.net/man/1/pwgen)
-* [S3cmd](https://s3tools.org/s3cmd)
-* [ncdu](https://dev.yorhel.nl/ncdu)
-* [thefuck](https://github.com/nvbn/thefuck)
-* [Unattended Upgrades](https://wiki.debian.org/UnattendedUpgrades)
-* [exa](https://the.exa.website/)
-* [bat](https://github.com/sharkdp/bat)
-* [fx](https://github.com/antonmedv/fx)
-* [yh](https://github.com/andreazorzetto/yh)
-* [shellcheck](https://www.shellcheck.net/)
-* [shfmt](https://github.com/mvdan/sh)
-* [restructuredtext-lint](https://pypi.org/project/restructuredtext-lint/)
-* [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint/)
-* [markdown-link-check](https://github.com/tcort/markdown-link-check)
-* [Prettier](https://prettier.io/)
-* [Poetry](https://pypi.org/project/poetry/)
-* [tox-poetry](https://pypi.org/project/tox-poetry/)
-* [Homebrew](http://brew.sh/)
-* [jqp](https://github.com/noahgorstein/jqp)
+- [Ansible](https://www.ansible.com/)
+- [Midnight Commander](https://midnight-commander.org/)
+- [curl](https://curl.se/)
+- [tox](https://tox.readthedocs.io/en/latest/)
+- [net-tools](https://sourceforge.net/projects/net-tools/)
+- [locate](https://www.gnu.org/software/findutils/)
+- [TFLint](https://github.com/terraform-linters/tflint)
+- [jq](https://stedolan.github.io/jq/)
+- [yq](https://mikefarah.gitbook.io/yq/)
+- [pwgen](https://linux.die.net/man/1/pwgen)
+- [S3cmd](https://s3tools.org/s3cmd)
+- [ncdu](https://dev.yorhel.nl/ncdu)
+- [thefuck](https://github.com/nvbn/thefuck)
+- [Unattended Upgrades](https://wiki.debian.org/UnattendedUpgrades)
+- [exa](https://the.exa.website/)
+- [bat](https://github.com/sharkdp/bat)
+- [fx](https://github.com/antonmedv/fx)
+- [yh](https://github.com/andreazorzetto/yh)
+- [shellcheck](https://www.shellcheck.net/)
+- [shfmt](https://github.com/mvdan/sh)
+- [restructuredtext-lint](https://pypi.org/project/restructuredtext-lint/)
+- [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint/)
+- [markdown-link-check](https://github.com/tcort/markdown-link-check)
+- [Prettier](https://prettier.io/)
+- [Poetry](https://pypi.org/project/poetry/)
+- [tox-poetry](https://pypi.org/project/tox-poetry/)
+- [Homebrew](http://brew.sh/)
+- [jqp](https://github.com/noahgorstein/jqp)
 
 <!-- * [ngrok](https://ngrok.com/) -->
 
 ### Monitoring
 
-* [bpytop](https://github.com/aristocratos/bpytop)
-* [iftop](https://linux.die.net/man/8/iftop)
-* [iotop](https://linux.die.net/man/1/iotop)
+- [bpytop](https://github.com/aristocratos/bpytop)
+- [iftop](https://linux.die.net/man/8/iftop)
+- [iotop](https://linux.die.net/man/1/iotop)
 
 ### Kubernetes
 
-* [kubectl](https://kubernetes.io/docs/reference/kubectl/)
-* [Helm](https://helm.sh/)
+- [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+- [Helm](https://helm.sh/)
 
 ### Databases
 
-* [mysql-client](https://dev.mysql.com/doc/refman/8.0/en/mysql.html)
-* [DBeaver](https://dbeaver.io/)
+- [mysql-client](https://dev.mysql.com/doc/refman/8.0/en/mysql.html)
+- [DBeaver](https://dbeaver.io/)
 
 ### Docker
 
-* [Docker Compose](https://docs.docker.com/compose/)
-* [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker](https://www.docker.com/)
 
 ### Digital Ocean
 
-* [doctl](https://docs.digitalocean.com/reference/doctl/)
+- [doctl](https://docs.digitalocean.com/reference/doctl/)
 
 ### Browsers
 
-* [Chromium](https://www.chromium.org/Home)
+- [Chromium](https://www.chromium.org/Home)

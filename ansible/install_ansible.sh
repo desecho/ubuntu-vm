@@ -1,6 +1,6 @@
-#!/bin/bash
-
-set -eou pipefail
+#!/usr/bin/env bash
+set -Eeuo pipefail
+IFS=$'\n\t'
 
 ANSIBLE_VERSION=3.1.0
 
