@@ -5,6 +5,14 @@ include makefiles/help.mk
 include makefiles/macros.mk
 
 #------------------------------------
+# Helpers
+#------------------------------------
+
+.PHONY: pre-commit
+.pre-commit:
+	@pre-commit run --all-files
+
+#------------------------------------
 # Installation
 #------------------------------------
 BIN_DIR := /usr/local/bin
@@ -110,14 +118,12 @@ provision:
 
 .PHONY: lint
 ## Run linters
-lint:
+lint: .pre-commit
 	$(call print,Linting)
 	@actionlint
-	@pre-commit run --all-files
 
 .PHONY: format
 ## Format files
-format:
+format: .pre-commit
 	$(call print,Formatting files)
-	@pre-commit run --all-files
 #------------------------------------
