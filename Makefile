@@ -119,8 +119,5 @@ lint:
 ## Format files
 format:
 	$(call print,Formatting files)
-	@shfmt -l -w .
-	@markdownlint README.md --fix
-	@prettier --write ./.github/**/*.yaml ./**/*.yaml
-	@prettier --write ./**/*.json
+	@pre-commit run --all-files
 #------------------------------------

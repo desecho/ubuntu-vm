@@ -6,6 +6,7 @@ email:
 digitalocean_token:
 spaces_access_key:
 spaces_secret_key:
+gh_token:
 # ngrok_token:
 
 shell: zsh

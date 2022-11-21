@@ -2,44 +2,44 @@
 
 # Kubectl
 function getsecret() {
-    kubectl get secrets "$1" -o json | jq '.data | map_values(@base64d)'
+  kubectl get secrets "$1" -o json | jq '.data | map_values(@base64d)'
 }
 
 function kti() {
-    kubectl exec -ti "$1" -- sh
+  kubectl exec -ti "$1" -- sh
 }
 
 #------------------------------------------------------------------------------
 
 # Docker
 function dockerti() {
-    docker exec -ti "$1" sh
+  docker exec -ti "$1" sh
 }
 
 function dockerclean() {
-    docker system prune -a
-    docker volume rm "$(docker volume ls --filter dangling=true -q)"
+  docker system prune -a
+  docker volume rm "$(docker volume ls --filter dangling=true -q)"
 }
 
 #------------------------------------------------------------------------------
 # Git
 
 function _get_default_branch() {
-    git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+  git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 }
 
 function grmaster() {
-    current_branch=$(git branch --show-current)
-    default_branch=$(_get_default_branch)
-    git switch "${default_branch}"
-    git pull
-    git switch "${current_branch}"
-    git rebase "${default_branch}"
+  current_branch=$(git branch --show-current)
+  default_branch=$(_get_default_branch)
+  git switch "${default_branch}"
+  git pull
+  git switch "${current_branch}"
+  git rebase "${default_branch}"
 }
 
 function gmaster() {
-    git switch "$(_get_default_branch)"
-    git pull
+  git switch "$(_get_default_branch)"
+  git pull
 }
 alias gmain="gmaster"
 
@@ -70,7 +70,7 @@ alias ff!="git add . && git commit --amend --no-edit && git push --force-with-le
 # Other
 
 function forcekill() {
-    pkill -f "$1"
+  pkill -f "$1"
 }
 
 alias kctx="rm -f ~/.kube/config.lock && kubectx"

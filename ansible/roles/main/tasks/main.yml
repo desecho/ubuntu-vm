@@ -40,6 +40,8 @@
     - import_tasks: apps/yh.yml
     - import_tasks: apps/shfmt.yml
     - import_tasks: apps/hadolint.yml
+    - import_tasks: apps/gh.yml
+      become: no
     # - import_tasks: apps/ngrok.yml
   become: yes
 

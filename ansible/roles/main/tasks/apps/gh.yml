@@ -1,0 +1,10 @@
+---
+- name: Install gh
+  community.general.homebrew:
+    name: gh
+
+- name: Set GitHub token
+  lineinfile:
+    path: "{{ lookup('env', 'HOME') }}/{{ shell_init_file }}"
+    regexp: export GH_TOKEN="{{ gh_token }}"
+    line: export GH_TOKEN="{{ gh_token }}"

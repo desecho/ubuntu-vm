@@ -32,7 +32,7 @@ repos:
     rev: v0.0.17
     hooks:
       - id: shfmt
-        args: [-bn, -ci, -l, -w, -i, "4"]
+        args: [-bn, -ci, -l, -w, -i, "2"]
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
     rev: 2.6.1
